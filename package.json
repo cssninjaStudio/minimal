@@ -1,7 +1,7 @@
 {
   "name": "minimal",
   "version": "1.0.0",
-  "description": "Minimal - Bulma minimal landing page",
+  "description": "Minimal - Bulma + Alpine JS landing page",
   "main": "gulpfile.js",
   "dependencies": {
     "@ryangjchandler/spruce": "^2.2.2",

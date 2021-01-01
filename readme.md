@@ -1,6 +1,6 @@
-# Bold
+# Minimal
 
-Bulma Skeleton Template
+Bulma + Alpine JS landing page
 
 ## Usage
 
