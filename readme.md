@@ -14,7 +14,7 @@ npm run dev
 ```
 
 # Edits
-The Bulma source has been customized.
+The Bulma source has been customized for the template.
 
 * Call to `$fullhd-enabled: false;` in `_variables.scss` to override the default Bulma.
 * `/src/sass/sass/helpers/spacing.sass` has been removed from the imports. We import our own helpers instead.
