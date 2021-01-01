@@ -1,0 +1,66 @@
+<nav class="navbar is-transparent is-fixed-top is-fade" x-data="initNavbar()" x-on:scroll.window="scroll()" :class="{
+        'is-scrolled': scrolled,
+        '': !scrolled,
+        'is-solid': mobileOpen,
+        '': !mobileOpen
+    }">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img class="navbar-logo" src="/img/logo/minimal.svg" alt="">
+            </a>
+            <div class="navbar-burger" @click="openMobileMenu()">
+                <span class="menu-toggle">
+                    <span class="icon-box-toggle" :class="{
+                            'active': mobileOpen,
+                            '': !mobileOpen
+                        }">
+                        <span class="rotate">
+                            <i class="icon-line-top"></i>
+                            <i class="icon-line-center"></i>
+                            <i class="icon-line-bottom"></i>
+                        </span>
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="navbar-menu b-centered-mobile b-centered-tablet-p" :class="{
+                'is-active': mobileOpen,
+                '': !mobileOpen
+            }">
+            <div class="navbar-start">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-flex is-align-items-center is-arrowless j-center-tablet-p j-center-mobile" href="#">
+                        Variations
+                        <span class="px-1 is-flex is-justify-content-center is-align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="/index.html">
+                            Home v1
+                        </a>
+                        <a class="navbar-item" href="/landing-2.html">
+                            Home v2
+                        </a>
+                        <a class="navbar-item" href="/landing-3.html">
+                            Home v3
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <a href="#" class="navbar-item">Login</a>
+                <div class="navbar-item">
+                    <a class="button is-primary is-rounded is-raised">
+                        <span>Sign Up</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

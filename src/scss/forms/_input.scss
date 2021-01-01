@@ -1,0 +1,82 @@
+/*! _input.scss | Bold | Css ninja 2020-2021 */
+
+/*
+    1. Field
+    2. Control
+    3. Input
+    4. Textarea
+*/
+
+/* ==========================================================================
+1. Field
+========================================================================== */
+
+.field {
+    > label {
+        font-family: $font;
+        font-size: .95rem;
+        color: $medium-text;
+    }
+}
+
+
+/* ==========================================================================
+2. Control
+========================================================================== */
+
+.control {
+    &.has-icons-left, &.has-icons-right {
+        .icon {
+            height: 46px;
+            width: 46px;
+        }
+    }
+}
+
+/* ==========================================================================
+3. Input
+========================================================================== */
+
+.input {
+    transition: all .3s;
+    box-shadow: none;
+    border-color: $border;
+
+    &:focus {
+        box-shadow: $light-box-shadow;
+        border-color: darken($border, 2%);
+
+        ~ .icon {
+            color: $primary !important;
+        }
+    }
+
+    &.is-medium {
+        height: 46px;
+        font-size: 1.15rem;
+    }
+
+    &.is-large {
+        height: 54px;
+        font-size: 1.35rem;
+    }
+
+    ~ .icon {
+        transition: color .3s;
+    }
+}
+
+/* ==========================================================================
+4. Textarea
+========================================================================== */
+
+.textarea {
+    transition: all .3s;
+    box-shadow: none;
+    border-color: $border;
+
+    &:focus {
+        box-shadow: $light-box-shadow;
+        border-color: darken($border, 2%);
+    }
+}
