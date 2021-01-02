@@ -15,8 +15,9 @@ jobs:
 
       - name: Get the version from tag
         id: get_meta
-        run: echo ::set-output name=project::${GITHUB_REPOSITORY#*/}
-        run: echo ::set-output name=tag::${GITHUB_REF#refs/tags/}
+        run: |
+          echo ::set-output name=project::${GITHUB_REPOSITORY#*/}
+          echo ::set-output name=tag::${GITHUB_REF#refs/tags/}
 
       - uses: actions/setup-node@v1
         with:
