@@ -10,18 +10,18 @@
                 <img class="navbar-logo" src="/img/logo/minimal.svg" alt="">
             </a>
             <div class="navbar-burger" @click="openMobileMenu()">
-                <span class="menu-toggle">
-                    <span class="icon-box-toggle" :class="{
+                <div class="menu-toggle">
+                    <div class="icon-box-toggle is-navbar" :class="{
                             'active': mobileOpen,
                             '': !mobileOpen
                         }">
-                        <span class="rotate">
+                        <div class="rotate">
                             <i class="icon-line-top"></i>
                             <i class="icon-line-center"></i>
                             <i class="icon-line-bottom"></i>
-                        </span>
-                    </span>
-                </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="navbar-menu b-centered-mobile b-centered-tablet-p" :class="{
