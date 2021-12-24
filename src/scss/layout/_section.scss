@@ -11,11 +11,11 @@
 
 .section {
     &.is-grey {
-        background: $widget-grey;
+        background: var(--section-bg-color-grey);
     }
 
     &.is-minimal {
-        background: lighten(#f3f3f3, 2%);
+        background: var(--section-bg-color-grey);
     }
 
     &.has-pseudo-lines {
@@ -25,7 +25,7 @@
             content: '';
             width: 2px;
             height: 60px;
-            background: $primary;
+            background: var(--wrap-border-color);
             position: absolute;
             top: 0;
             left: 0;
@@ -38,7 +38,7 @@
             content: '';
             width: 2px;
             height: 60px;
-            background: $primary;
+            background: var(--wrap-border-color);
             position: absolute;
             bottom: 0;
             left: 0;
