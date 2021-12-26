@@ -1,69 +1,99 @@
-/*! _placeload.scss | Houseo | Css ninja 2020-2021 */
+/*
+    1. Placeload base styles
+    2. Placeload dark styles
+*/
 
 /* ==========================================================================
-Loader
+1. Placeload base styles
 ========================================================================== */
-
-$background: #f6f7f8;
-$grey-nuance-lighter: #eeeeee;
-$grey-nuance-darker: #dddddd;
-$lighter-grey: #e8e8e8;
 
 .content-shape {
   height: 10px;
   width: 100%;
-  margin-bottom: 10px;
-  border-radius: 2px;
+  max-width: 100%;
+  border-radius: 0.25rem;
+
+  &.w-80 {
+    max-width: 80%;
+  }
+
+  &.w-60 {
+    max-width: 60%;
+  }
+
+  &.w-40 {
+    max-width: 40%;
+  }
+
+  &.w-20 {
+    max-width: 20%;
+  }
+
+  &.img-shape {
+    width: 100%;
+    max-width: 110px;
+    min-width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 1rem auto 0.75rem auto;
+  }
+
+  &.title-shape {
+    display: block;
+    min-width: 160px;
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.subtitle-shape {
+    display: block;
+    min-width: 80px;
+    max-width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.social-shape {
+    height: 32px;
+    width: 32px;
+    min-width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 0.15rem;
+  }
+
+  &.is-left {
+    margin-left: 0 !important;
+  }
 }
 
-//Loading animation
 .loads {
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-name: placeload;
   animation-name: placeload;
-  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  background: $background;
-  background: $grey-nuance-lighter;
+  background: var(--placeload-nuance-from);
   background: -webkit-gradient(
     linear,
     left top,
     right top,
-    color-stop(8%, $grey-nuance-lighter),
-    color-stop(18%, $grey-nuance-darker),
-    color-stop(33%, $grey-nuance-lighter)
-  );
-  background: -webkit-linear-gradient(
-    left,
-    #eeeeee 8%,
-    #dddddd 18%,
-    #eeeeee 33%
+    color-stop(8%, var(--placeload-nuance-from)),
+    color-stop(18%, var(--placeload-nuance-to)),
+    color-stop(33%, var(--placeload-nuance-from))
   );
   background: linear-gradient(
     to right,
-    $grey-nuance-lighter 8%,
-    $grey-nuance-darker 18%,
-    $grey-nuance-lighter 33%
+    var(--placeload-nuance-from) 8%,
+    var(--placeload-nuance-to) 18%,
+    var(--placeload-nuance-from) 33%
   );
-  -webkit-background-size: 800px 104px;
+  background-size: 800px 104px;
   background-size: 1200px 104px;
   position: relative;
-}
-
-//Keyframes
-@-webkit-keyframes placeload {
-  0% {
-    background-position: -468px 0;
-  }
-
-  100% {
-    background-position: 468px 0;
-  }
 }
 
 @keyframes placeload {
@@ -73,5 +103,31 @@ $lighter-grey: #e8e8e8;
 
   100% {
     background-position: 468px 0;
+  }
+}
+
+/* ==========================================================================
+  2. Placeload dark styles
+========================================================================== */
+
+.is-dark {
+  .loads {
+    background: var(--placeload-dark-nuance-from);
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(8%, var(--placeload-dark-nuance-from)),
+      color-stop(18%, var(--placeload-dark-nuance-to)),
+      color-stop(33%, var(--placeload-dark-nuance-from))
+    );
+    background: linear-gradient(
+      to right,
+      var(--placeload-dark-nuance-from) 8%,
+      var(--placeload-dark-nuance-to) 18%,
+      var(--placeload-dark-nuance-from) 33%
+    );
+    background-size: 800px 104px;
+    background-size: 1200px 104px;
   }
 }
