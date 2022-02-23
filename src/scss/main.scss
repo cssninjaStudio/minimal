@@ -1,37 +1,30 @@
-/*! main.scss | Bold | Css ninja 2021-2022 */
+/*! main.scss | Minimal | Css ninja 2022-2023 */
 
 /* ==========================================================================
 SCSS Imports
 ========================================================================== */
 
-@import "abstracts/variables";
-@import "abstracts/brands";
-@import "abstracts/shadows";
-@import "abstracts/typography";
+//CSS vars setup
+@import "./bulma-generated/generated-vars.sass";
+@import "./css-variables/all";
 
-@import "../sass/bulma";
+//Additional variables
+@import "./abstracts/variables";
 
-@import "utilities/utilities";
+//Bulma
+@import "../../node_modules/bulma-css-vars/bulma-cv-lib";
 
-@import "abstracts/animations";
-@import "abstracts/helpers";
+//Utilities
+@import "utilities/all";
 
-@import "components/pageloader";
-@import "components/navbar";
-@import "components/hamburger";
-@import "components/button";
-@import "components/card";
-@import "components/table";
-@import "components/tabs";
-@import "components/image";
-@import "components/video";
-@import "components/tag";
-@import "components/pricing";
-@import "components/map";
+//Base
+@import "base/all";
 
-@import "forms/input";
-@import "forms/toggle";
+//Forms
+@import "forms/all";
 
-@import "layout/hero";
-@import "layout/section";
-@import "layout/footer";
+//Layout
+@import "layout/all";
+
+//Components
+@import "components/all";
