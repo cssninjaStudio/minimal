@@ -6,7 +6,7 @@
   --placeholder: #cecece;
   --border: #e3e3e3;
   --border-hover: #d4cfcf;
-  --primary--color-invert: var(--white-smoke);
+  --primary-color-invert: var(--white-smoke);
   --fire: #e03222;
 
   // placeload colors
@@ -96,6 +96,6 @@
   // light-text HSL (#a2a5b9) // hsl(232, 14%, 68%)
   @include colorHsl("light-text", 232, 14%, 68%);
 
-  // night HSL (#0a0a14) // hsl(240, 33%, 6%)
-  @include colorHsl('night', 240, 33%, 6%);
+  // night HSL (#292524) // hsl(12, 6%, 15%)
+  @include colorHsl('night', 12, 6%, 15%);
 }

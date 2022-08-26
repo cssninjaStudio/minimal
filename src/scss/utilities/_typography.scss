@@ -35,6 +35,10 @@ var {
     font-size: 4rem;
   }
 
+  &.is-7 {
+    font-size: 0.9rem;
+  }
+
   &.is-narrow {
     margin-bottom: 0 !important;
   }
@@ -61,6 +65,10 @@ var {
 
   &.is-bolder {
     font-weight: 800;
+  }
+
+  &.is-cursive {
+    font-family: var(--font-cursive) !important;
   }
 }
 
@@ -91,7 +99,7 @@ var {
 
 .paragraph {
   font-family: var(--font);
-  color: var(--paragraph-color);
+  color: var(--light-text);
 
   &.is-inverted {
     color: var(--paragraph-color-inverted);
@@ -111,7 +119,7 @@ var {
 .separator {
   width: 1px;
   height: 26px;
-  border-right: 1px solid var(--border);
+  border-#{$end-direction}: 1px solid var(--border);
 }
 
 /* ==========================================================================
@@ -136,6 +144,14 @@ var {
 
 .text-capitalize {
   text-transform: capitalize;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-linethrough {
+  text-decoration: line-through;
 }
 
 .is-font {
@@ -166,8 +182,8 @@ var {
   font-weight: 700 !important;
 }
 
-.is-weight-500 {
-  font-weight: 500 !important;
+.is-weight-800 {
+  font-weight: 800 !important;
 }
 
 .is-weight-900 {
@@ -212,4 +228,37 @@ var {
 
 .rem-150 {
   font-size: 1.5rem !important;
+}
+
+.rem-175 {
+  font-size: 1.75rem !important;
+}
+
+.rem-200 {
+  font-size: 2rem !important;
+}
+
+.rem-225 {
+  font-size: 2.25rem !important;
+}
+
+.rem-250 {
+  font-size: 2.5rem !important;
+}
+
+.rem-275 {
+  font-size: 2.75rem !important;
+}
+
+.rem-300 {
+  font-size: 3rem !important;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .title {
+    &.is-1 {
+      font-size: 2.5rem;
+    }
+  }
 }

@@ -1,94 +1,155 @@
-/*
-    1. Footer Base
-*/
-
 /* ==========================================================================
-1. Footer Base
+Footer
 ========================================================================== */
 
 .footer {
-  position: relative;
-  padding-top: 6rem;
-  padding-bottom: 3rem;
-  background: var(--footer-default-bg-color);
+  padding: 6rem 1.5rem 2rem 1.5rem;
+  background: var(--footer-light-bg-color);
 
-  &.footer-light {
-    background: var(--footer-light-bg-color);
+  .title {
+    margin-bottom: 1rem;
   }
 
-  &.footer-dark {
-    background: var(--footer-dark-bg-color);
-
-    .title {
-      color: var(--white-smoke);
-      opacity: 0.6;
-    }
-
-    .footer-link {
-      color: var(--action-link-color);
-      opacity: 0.8;
-
-      &:hover {
-        color: var(--action-link-color-hover) !important;
-        opacity: 1;
-      }
-    }
-
-    .footer-text {
-      color: var(--white-smoke);
-    }
-  }
-
-  &.footer-left {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .footer-link {
-    font-family: var(--font);
-    color: var(--medium-text);
-    transition: color 0.3s;
-
-    &:hover {
-      color: var(--action-link-color);
-    }
+  .footer-logo {
+    display: block;
+    max-width: 120px;
+    margin-bottom: 1rem;
   }
 
   .footer-text {
-    font-family: var(--font);
     color: var(--medium-text);
+    font-family: var(--font);
+    font-size: 0.9rem;
   }
 
-  .footer-logo-centered {
-    display: block;
-    width: 100%;
-    max-width: 150px;
-    margin: 0 auto;
-  }
+  .socials {
+    padding-top: 16px;
 
-  .footer-logo-left {
-    &.css-ninja {
-      position: relative;
-      top: 4px;
+    a {
+      margin: 0 10px;
+      font-size: 0.9rem;
+      color: var(--medium-text);
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--primary);
+      }
     }
+  }
 
-    img {
-      display: block;
+  .footer-menu {
+    li {
+      padding-bottom: 8px;
+      font-family: var(--font);
+      font-size: 0.9rem;
+      color: var(--medium-text);
+
+      a {
+        color: var(--medium-text);
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem;
+
+    .subscribe {
       width: 100%;
-      max-width: 180px;
+      max-width: 340px;
+
+      .control {
+        position: relative;
+        width: 100%;
+
+        .input {
+          height: 50px;
+          background: var(--wrap-muted-color);
+          border-color: var(--wrap-muted-color);
+          width: 100%;
+          padding-#{$start-direction}: 1rem;
+
+          &:focus {
+            background: var(--input-bg-color);
+            border-color: var(--input-base-border-color);
+          }
+
+          &::placeholder {
+            color: var(--light-text);
+          }
+        }
+
+        .button {
+          position: absolute;
+          height: 40px;
+          top: 5px;
+          #{$end-direction}: 5px;
+
+          &:hover,
+          &:focus {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--button-primary-color);
+            box-shadow: var(--primary-box-shadow);
+          }
+        }
+      }
+    }
+
+    .copyright-text {
+      display: inline-flex;
+      align-items: center;
+      color: var(--light-text);
+      font-family: var(--font);
+      font-size: 0.9rem;
+
+      a {
+        color: var(--primary);
+        font-weight: 500;
+
+        .copyright-logo {
+          position: relative;
+          top: 4px;
+          min-width: 40px;
+        }
+      }
     }
   }
+}
 
-  .footer-img {
-    margin: 20px auto 18px;
-    height: 140px;
-    width: 100%;
-    max-width: 640px;
+.is-dark {
+  .footer {
+    .copyright {
+      .copyright-logo {
+        filter: invert(1);
+      }
+    }
+  }
+}
 
-    img {
-      display: block;
-      max-width: 100%;
-      margin: 0 auto;
+@media (max-width: 767px) {
+  .footer {
+    .copyright {
+      flex-direction: column;
+
+      .copyright-logo {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .footer {
+    .footer-text {
+      max-width: 480px;
     }
   }
 }

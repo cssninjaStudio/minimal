@@ -48,12 +48,12 @@
       visibility: hidden;
       width: 1px;
       height: 3px;
-      left: 70%;
+      #{$start-direction}: 70%;
     }
 
     &.active > div > i.icon-line-bottom {
       margin: -2px 0 0 -10px;
-      left: 50%;
+      #{$start-direction}: 50%;
       top: 12px;
 
       /*transform*/
@@ -66,7 +66,7 @@
 
     &.active > div > i.icon-line-top {
       margin: -2px 0 0 -10px;
-      left: 50%;
+      #{$start-direction}: 50%;
       top: 12px;
 
       /*transform*/
@@ -84,7 +84,7 @@
     height: 2px;
     background: var(--light-text);
     margin: -1px 0 0 -10px;
-    left: 50%;
+    #{$start-direction}: 50%;
     top: 11px;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
@@ -98,7 +98,7 @@
     height: 2px;
     background: var(--light-text);
     margin: -3px 0 0 -10px;
-    left: 50%;
+    #{$start-direction}: 50%;
     top: 7px;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
@@ -112,7 +112,7 @@
     height: 2px;
     background: var(--light-text);
     margin: 2px 0 0 -10px;
-    left: 50%;
+    #{$start-direction}: 50%;
     top: 14px;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;

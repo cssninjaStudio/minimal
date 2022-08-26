@@ -1,19 +1,29 @@
 <nav
   class="navbar is-transparent is-fixed-top is-fade"
   x-data="initNavbar()"
+  x-init="initScrollAnchors()"
+  x-on:mouseleave="megamenuOpened = false"
   x-on:scroll.window="scroll()"
   :class="{
         'is-scrolled': scrolled,
         '': !scrolled,
-        'is-solid': mobileOpen,
-        '': !mobileOpen
+        'is-solid': mobileOpen || megamenuOpened,
+        '': !mobileOpen || megamenuOpened
     }"
 >
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
-        <img class="navbar-logo light-image-block" src="img/logo/minimal.svg" alt="" />
-        <img class="navbar-logo dark-image-block" src="img/logo/minimal-white.svg" alt="" />
+        <img
+          class="navbar-logo light-image-block"
+          src="img/logo/minimal.svg"
+          alt=""
+        />
+        <img
+          class="navbar-logo dark-image-block"
+          src="img/logo/minimal-white.svg"
+          alt=""
+        />
       </a>
       <div class="navbar-burger" @click="openMobileMenu()">
         <div class="menu-toggle">
@@ -41,49 +51,70 @@
       }"
     >
       <div class="navbar-start">
-        <div class="navbar-item has-dropdown is-hoverable">
+        <!-- Dropdown -->
+        <div
+          class="navbar-item has-dropdown is-hoverable"
+          x-data="{ open: false }"
+          @click.away="open = false"
+        >
           <a
-            class="
-              navbar-link
-              is-flex is-align-items-center is-arrowless
-              j-center-tablet-p j-center-mobile
-            "
-            href="/"
+            x-on:mouseover="megamenuOpened = false, openedMegamenu = ''"
+            @click="open = !open"
+            class="navbar-link is-flex is-align-items-center is-arrowless j-center-tablet-p j-center-mobile"
           >
-            Variations
+            Pages
             <span
-              class="
-                px-1
-                is-flex is-justify-content-center is-align-items-center
-              "
+              class="caret px-1 is-flex is-justify-content-center is-align-items-center"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-chevron-down"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
+              <i class="iconify" data-icon="lucide:chevron-down"></i>
             </span>
           </a>
-          <div class="navbar-dropdown is-boxed">
-            <a class="navbar-item" href="/index.html"> Home v1 </a>
-            <a class="navbar-item" href="/landing-2.html"> Home v2 </a>
-            <a class="navbar-item" href="/landing-3.html"> Home v3 </a>
+          <div
+            class="navbar-dropdown is-boxed"
+            :class="open ? 'is-active' : ''"
+          >
+            <a class="navbar-item" href="/landing-1.html"> Example 1 </a>
+            <a class="navbar-item" href="/landing-2.html"> Example 2 </a>
+            <a class="navbar-item" href="/landing-3.html"> Example 3 </a>
+            <a class="navbar-item" href="/landing-4.html"> Example 4 </a>
+            <a class="navbar-item" href="/landing-5.html"> Example 5 </a>
+            <a class="navbar-item" href="/landing-6.html"> Example 6 </a>
+            <a class="navbar-item" href="/landing-7.html"> Example 7 </a>
+            <a class="navbar-item" href="/login.html"> Login </a>
+            <a class="navbar-item" href="/signup.html"> Signup </a>
+            <a class="navbar-item" href="/404.html"> Error 404 </a>
           </div>
         </div>
+        <a
+          class="navbar-item"
+          x-on:mouseover="megamenuOpened = true, openedMegamenu = 'megamenu-1'"
+        >
+          <span>Elements</span>
+          <i class="iconify caret" data-icon="lucide:chevron-down"></i>
+        </a>
+        <a
+          class="navbar-item"
+          x-on:mouseover="megamenuOpened = true, openedMegamenu = 'megamenu-2'"
+        >
+          <span>Form</span>
+          <i class="iconify caret" data-icon="lucide:chevron-down"></i>
+        </a>
+        <a
+          class="navbar-item"
+          x-on:mouseover="megamenuOpened = true, openedMegamenu = 'megamenu-3'"
+        >
+          <span>Blocks</span>
+          <i class="iconify caret" data-icon="lucide:chevron-down"></i>
+        </a>
       </div>
       <div class="navbar-end">
         <div class="navbar-item is-mobile-centered">
           <label class="theme-toggle">
-            <input type="checkbox" x-on:change="toggleTheme()" :checked="$store.app.isDark" />
+            <input
+              type="checkbox"
+              x-on:change="toggleTheme()"
+              :checked="$store.app.isDark"
+            />
             <span class="theme-toggle-inner">
               <i class="sun-icon iconify" data-icon="feather:sun"></i>
               <i class="moon-icon iconify" data-icon="feather:moon"></i>
@@ -99,4 +130,5 @@
       </div>
     </div>
   </div>
+  {{> megamenu}}
 </nav>

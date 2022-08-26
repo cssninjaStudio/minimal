@@ -19,7 +19,7 @@ $radius-rounded: 290486px !default;
   animation: spinAround 500ms infinite linear;
   border: 2px solid $grey-lighter;
   border-radius: $radius-rounded;
-  border-right-color: transparent;
+  border-#{$end-direction}-color: transparent;
   border-top-color: transparent;
   content: "";
   display: block;
@@ -52,7 +52,7 @@ $radius-rounded: 290486px !default;
 
     position: absolute !important;
     top: 0;
-    left: 0;
+    #{$start-direction}: 0;
     height: 100%;
     width: 100%;
     z-index: 4;
@@ -62,7 +62,7 @@ $radius-rounded: 290486px !default;
 .loader-wrap {
   position: absolute;
   top: 0;
-  left: 0;
+  #{$start-direction}: 0;
   height: 100%;
   width: 100%;
   background: var(--card-bg-color);

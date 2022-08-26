@@ -14,7 +14,7 @@
   background: var(--button-base-bg-color);
   transition: all 0.3s;
 
-  &:hover {
+  &:not(.is-primary):hover {
     border-color: var(--button-base-border-color-hover);
     color: var(--button-base-color);
   }
@@ -53,17 +53,35 @@
     }
   }
 
+  &.is-form {
+    border-radius: 4px !important;
+  }
+
   &:not(.is-rounded) {
     border-radius: 0.75rem;
+  }
+
+  &:focus:not(:active) {
+    box-shadow: var(--light-box-shadow);
+    border-color: var(--button-base-border-color-hover);
+  }
+
+  &[disabled] {
+    background: var(--button-base-bg-color);
+    border-color: var(--button-base-border-color);
   }
 
   &.is-primary {
     background: var(--button-primary-bg-color);
     border: 1px solid var(--button-primary-border-color);
-    color: var(--white);
+    color: var(--button-primary-color);
     line-height: 1;
     font-size: 0.9rem;
     font-weight: 500;
+
+    &:hover {
+      color: var(--button-primary-color);
+    }
 
     &.raised:hover,
     &.is-raised {
@@ -77,152 +95,7 @@
 
       &:hover {
         background: var(--button-primary-bg-color);
-        color: var(--white);
-      }
-    }
-  }
-
-  &.is-secondary {
-    background: var(--button-secondary-bg-color);
-    border: 1px solid var(--button-secondary-border-color);
-    color: var(--button-secondary-color);
-    line-height: 1;
-    font-size: 0.9rem;
-    font-weight: 500;
-
-    &:hover {
-      color: var(--white);
-    }
-
-    &.raised:hover,
-    &.is-raised {
-      box-shadow: var(--secondary-box-shadow);
-    }
-
-    &.is-outlined {
-      border-color: var(--button-secondary-border-color);
-      color: var(--button-secondary-bg-color);
-      background: transparent;
-
-      &:hover {
-        background: var(--button-secondary-bg-color);
-        color: var(--white);
-      }
-    }
-  }
-
-  &.is-info {
-    background: var(--button-info-bg-color);
-    border: 1px solid var(--button-info-border-color);
-    color: var(--button-info-color);
-    line-height: 1;
-    font-size: 0.9rem;
-    font-weight: 500;
-
-    &:hover {
-      color: var(--white);
-    }
-
-    &.raised:hover,
-    &.is-raised {
-      box-shadow: var(--info-box-shadow);
-    }
-
-    &.is-outlined {
-      border-color: var(--button-info-border-color);
-      color: var(--button-info-bg-color);
-      background: transparent;
-
-      &:hover {
-        background: var(--button-info-bg-color);
-        color: var(--white);
-      }
-    }
-  }
-
-  &.is-success {
-    background: var(--button-success-bg-color);
-    border: 1px solid var(--button-success-border-color);
-    color: var(--button-success-color);
-    line-height: 1;
-    font-size: 0.9rem;
-    font-weight: 500;
-
-    &:hover {
-      color: var(--white);
-    }
-
-    &.raised:hover,
-    &.is-raised {
-      box-shadow: var(--success-box-shadow);
-    }
-
-    &.is-outlined {
-      border-color: var(--button-success-border-color);
-      color: var(--button-success-bg-color);
-      background: transparent;
-
-      &:hover {
-        background: var(--button-success-bg-color);
-        color: var(--white);
-      }
-    }
-  }
-
-  &.is-warning {
-    background: var(--button-warning-bg-color);
-    border: 1px solid var(--button-warning-border-color);
-    color: var(--button-warning-color);
-    line-height: 1;
-    font-size: 0.9rem;
-    font-weight: 500;
-
-    &:hover {
-      color: var(--white);
-    }
-
-    &.raised:hover,
-    &.is-raised {
-      box-shadow: var(--warning-box-shadow);
-    }
-
-    &.is-outlined {
-      border-color: var(--button-warning-border-color);
-      color: var(--button-warning-bg-color);
-      background: transparent;
-
-      &:hover {
-        background: var(--button-warning-bg-color);
-        color: var(--white);
-      }
-    }
-  }
-
-  &.is-danger {
-    background: var(--button-danger-bg-color);
-    border: 1px solid var(--button-danger-border-color);
-    color: var(--button-danger-color);
-    line-height: 1;
-    font-size: 0.9rem;
-    font-weight: 500;
-
-    &:hover {
-      color: var(--white);
-    }
-
-    &.raised:hover,
-    &.is-raised {
-      box-shadow: var(--danger-box-shadow);
-    }
-
-    &.is-outlined {
-      border-color: var(--button-danger-border-color);
-      color: var(--button-danger-bg-color);
-      background: transparent;
-
-      &:hover {
-        background: var(--button-danger-bg-color);
-        color: var(--white);
+        color: var(--button-primary-color);
       }
     }
   }

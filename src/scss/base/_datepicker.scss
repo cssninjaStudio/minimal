@@ -1,7 +1,6 @@
 /*
     1. Datepicker
 */
-
 /* ==========================================================================
 1. Datepicker
 ========================================================================== */
@@ -28,11 +27,13 @@ $font-size: $width * 0.056;
   flex-direction: column;
   z-index: 9001;
   user-select: none;
-  border-radius: 8px;
-  padding: 30px;
+  border-radius: 0.75rem;
+  padding: 2rem;
   overflow: hidden;
   background: var(--datepicker-bg-color);
-  box-shadow: var(--medium-box-shadow);
+  border: 1px solid var(--card-border-color);
+  margin-top: 0.5rem;
+  box-shadow: var(--light-box-shadow);
 
   * {
     box-sizing: border-box;
@@ -42,7 +43,7 @@ $font-size: $width * 0.056;
 .qs-centered {
   position: fixed;
   top: 50%;
-  left: 50%;
+  #{$start-direction}: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -53,7 +54,7 @@ $font-size: $width * 0.056;
 .qs-overlay {
   position: absolute;
   top: 0;
-  left: 0;
+  #{$start-direction}: 0;
   background: var(--night-light-4);
   color: var(--white);
   width: 100%;
@@ -104,7 +105,7 @@ $font-size: $width * 0.056;
     cursor: pointer;
     position: absolute;
     top: 0;
-    right: 8px;
+    #{$end-direction}: 8px;
     color: var(--white);
     font-weight: 600;
     opacity: 0.7;
@@ -176,15 +177,15 @@ $font-size: $width * 0.056;
   position: relative;
   cursor: pointer;
   border-radius: $radius;
-  transition: background 0.15s;
+  transition: background-color 0.15s;
 
   &:hover {
     &.qs-left:after {
-      border-right-color: black;
+      border-#{$end-direction}-color: black;
     }
 
     &.qs-right:after {
-      border-left-color: black;
+      border-#{$start-direction}-color: black;
     }
 
     background: rgba(0, 0, 0, 0.1);
@@ -199,14 +200,14 @@ $font-size: $width * 0.056;
   }
 
   &.qs-left:after {
-    border-right-color: gray;
-    right: 50%;
+    border-#{$end-direction}-color: gray;
+    #{$end-direction}: 50%;
     transform: translate(25%, -50%) scale(0.7);
   }
 
   &.qs-right:after {
-    border-left-color: gray;
-    left: 50%;
+    border-#{$start-direction}-color: gray;
+    #{$start-direction}: 50%;
     transform: translate(-25%, -50%) scale(0.7);
   }
 }
@@ -230,11 +231,11 @@ $font-size: $width * 0.056;
 }
 
 .qs-month {
-  padding-right: 0.5ex;
+  padding-#{$end-direction}: 0.5ex;
 }
 
 .qs-year {
-  padding-left: 0.5ex;
+  padding-#{$start-direction}: 0.5ex;
 }
 
 .qs-squares {
@@ -299,8 +300,8 @@ $font-size: $width * 0.056;
 // Daterange start selection.
 .qs-range-start {
   &:not(.qs-range-6) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-#{$end-direction}-radius: 0;
+    border-bottom-#{$end-direction}-radius: 0;
   }
 }
 
@@ -313,21 +314,21 @@ $font-size: $width * 0.056;
   }
 
   &.qs-range-0 {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-#{$end-direction}-radius: 0;
+    border-bottom-#{$end-direction}-radius: 0;
   }
 
   &.qs-range-6 {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-top-#{$start-direction}-radius: 0;
+    border-bottom-#{$start-direction}-radius: 0;
   }
 }
 
 // Daterange end selection.
 .qs-range-end {
   &:not(.qs-range-0) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-top-#{$start-direction}-radius: 0;
+    border-bottom-#{$start-direction}-radius: 0;
   }
 }
 
@@ -363,6 +364,6 @@ $font-size: $width * 0.056;
     border-radius: 50%;
     background: var(--primary);
     bottom: 0;
-    right: 0;
+    #{$end-direction}: 0;
   }
 }

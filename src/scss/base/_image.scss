@@ -108,7 +108,7 @@
     .overlay {
       position: absolute;
       top: -4px;
-      left: -4px;
+      #{$start-direction}: -4px;
       height: 100%;
       width: 100%;
       margin: 4px;
@@ -122,7 +122,7 @@
     .image-owner {
       position: absolute;
       bottom: 14px;
-      left: 14px;
+      #{$start-direction}: 14px;
       max-height: 40px;
       display: flex;
       align-items: center;
@@ -142,7 +142,7 @@
         color: var(--white);
         font-family: var(--font);
         font-size: 0.9rem;
-        margin-left: 8px;
+        margin-#{$start-direction}: 8px;
         opacity: 0;
         transform: translateY(5px);
         transition: all 0.3s;
@@ -152,11 +152,11 @@
     .photo-time {
       position: absolute;
       top: 20px;
-      left: 14px;
+      #{$start-direction}: 14px;
       color: var(--white);
       font-family: var(--font);
       font-size: 0.85rem;
-      margin-left: 8px;
+      margin-#{$start-direction}: 8px;
       opacity: 0;
       transform: translateY(5px);
       z-index: 2;
@@ -166,7 +166,7 @@
     .photo-like {
       position: absolute;
       top: 14px;
-      right: 14px;
+      #{$end-direction}: 14px;
       height: 38px;
       width: 38px;
       border-radius: 50%;
@@ -211,7 +211,7 @@
         .like-overlay {
           position: absolute;
           top: -2px;
-          left: -2px;
+          #{$start-direction}: -2px;
           height: calc(100% + 4px);
           width: calc(100% + 4px);
           border-radius: 50%;

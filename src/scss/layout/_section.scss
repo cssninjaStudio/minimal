@@ -7,6 +7,12 @@
 ========================================================================== */
 
 .section {
+  overflow: hidden;
+
+  &.is-overflown {
+    overflow: initial;
+  }
+
   &.is-grey {
     background: var(--section-bg-color-grey);
   }
@@ -25,8 +31,8 @@
       background: var(--wrap-border-color);
       position: absolute;
       top: 0;
-      left: 0;
-      right: 0;
+      #{$start-direction}: 0;
+      #{$end-direction}: 0;
       margin: 0 auto;
       transform: rotate(180deg);
     }
@@ -38,8 +44,8 @@
       background: var(--wrap-border-color);
       position: absolute;
       bottom: 0;
-      left: 0;
-      right: 0;
+      #{$start-direction}: 0;
+      #{$end-direction}: 0;
       margin: 0 auto;
       transform: rotate(180deg);
     }

@@ -1,714 +1,706 @@
 ---
-layout: default
+layout: minimal
 title: Index
 ---
 
-<div class="hero is-fullheight is-side is-right has-top-bg">
-  <img class="top-bg" src="/img/bg/top-bg.svg" alt="" />
-
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-vcentered">
-        <div class="column is-6">
-          <img
-            class="light-image-block mx-auto"
-            src="/img/illustrations/hero.svg"
-            alt=""
-          />
-          <img
-            class="dark-image-block mx-auto"
-            src="/img/illustrations/hero-dark.svg"
-            alt=""
-          />
-        </div>
-        <div class="column is-5 is-offset-1">
-          <h1 class="title is-1 is-bold">Hi there. Iam a landing page.</h1>
-          <p class="subtitle is-5 b-centered-tablet-p text-medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sint ista
-            Graecorum; Hoc mihi cum tuo fratre convenit desectetur elit vosim.
-          </p>
-          <div class="buttons">
-            <a class="button is-primary is-medium is-raised">Discover</a>
-            <a class="button is-primary is-outlined is-medium"
-              >Free Trial</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-foot">
-    <div class="mx-auto max-w-7">
-      <div class="tabs pb-4">
-        <ul>
-          <li>
-            <img src="./img/logo/brands/covenant.svg" alt="" />
-          </li>
-          <li>
-            <img src="./img/logo/brands/kromo.svg" alt="" />
-          </li>
-          <li>
-            <img src="./img/logo/brands/infinite.svg" alt="" />
-          </li>
-          <li>
-            <img src="./img/logo/brands/gutwork.svg" alt="" />
-          </li>
-          <li>
-            <img src="./img/logo/brands/tribe.svg" alt="" />
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section has-pseudo-lines">
-  <div class="container">
-    <div class="has-text-centered py-12">
-      <h2 class="title is-3">Awesome Features</h2>
-      <p class="subtitle is-5 text-medium">
-        You won't find better stuff anywhere else
-      </p>
-    </div>
-
-    <div class="py-6">
-      <div class="columns is-vcentered b-centered-tablet-p">
-        <div class="column is-5 is-offset-1">
-          <img
-            class="light-image-block"
-            src="/img/illustrations/feature-1.svg"
-            alt=""
-          />
-          <img
-            class="dark-image-block"
-            src="/img/illustrations/feature-1-dark.svg"
-            alt=""
-          />
-        </div>
-
-        <div class="column is-5">
-          <h3 class="title is-3 is-narrow">Make your ideas real</h3>
-          <p class="py-2 max-w-4 small:max-w-full text-medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illud non
-            continuo, ut aeque incontentae. Duo Reges: constructio interrete. Si
-            qua in iis corrigere voluit, deteriora fecit. Sit enim idem caecus,
-            debilis.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section is-minimal has-pseudo-lines">
-  <div class="container">
-    <div class="py-6">
-      <div class="columns is-vcentered b-centered-tablet-p">
-        <div class="column is-5 is-offset-1">
-          <h3 class="title is-3 is-narrow">Deliver fast</h3>
-          <p class="py-2 max-w-4 small:max-w-full text-medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illud non
-            continuo, ut aeque incontentae. Duo Reges: constructio interrete. Si
-            qua in iis corrigere voluit, deteriora fecit. Sit enim idem caecus,
-            debilis.
-          </p>
-          <div class="is-flex is-align-items-center py-1 j-center-tablet-p">
+<!--Wrapper-->
+<div class="cssninja-product">
+  <!--Navigation-->
+  <div
+    class="cssninja-nav"
+    x-data="initNavbar()"
+    x-init="initScrollAnchors()"
+    x-on:scroll.window="scroll()"
+    :class="{
+    'is-scrolled': scrolled,
+    '': !scrolled,
+    'is-solid': mobileOpen,
+    '': !mobileOpen
+}"
+  >
+    <div class="cssninja-nav-inner">
+      <div class="left">
+        <a class="navbar-brand" href="/">
+          <span class="logo">
+            <img class="light-image-block" src="/img/logo/minimal.svg" alt="" />
+            <img class="dark-image-block" src="/img/logo/minimal-white.svg" alt="" />
+          </span>
+          <span class="version">v3.0</span>
+        </a>
+        <div class="nav-burger" @click="openMobileMenu()">
+          <div class="menu-toggle">
             <div
-              class="
-                is-32x32
-                is-flex
-                is-justify-content-center
-                is-align-items-center
-                is-circle
-                bg-grey
-              "
+              class="icon-box-toggle is-navbar"
+              :class="{
+                  'active': mobileOpen,
+                  '': !mobileOpen
+              }"
             >
-              <i
-                class="iconify text-light rem-125"
-                data-icon="ion:images-outline"
-              ></i>
-            </div>
-            <div class="ml-2">
-              <p class="small:max-w-2 text-light">Curated resources.</p>
-            </div>
-          </div>
-          <div class="is-flex is-align-items-center py-1 j-center-tablet-p">
-            <div
-              class="
-                is-32x32
-                is-flex
-                is-justify-content-center
-                is-align-items-center
-                is-circle
-                bg-grey
-              "
-            >
-              <i
-                class="iconify text-light rem-125"
-                data-icon="ion:layers-outline"
-              ></i>
-            </div>
-            <div class="ml-2">
-              <p class="small:max-w-2 text-light">API documentation.</p>
-            </div>
-          </div>
-          <div class="is-flex is-align-items-center py-1 j-center-tablet-p">
-            <div
-              class="
-                is-32x32
-                is-flex
-                is-justify-content-center
-                is-align-items-center
-                is-circle
-                bg-grey
-              "
-            >
-              <i
-                class="iconify text-light rem-125"
-                data-icon="ion:help-buoy-outline"
-              ></i>
-            </div>
-            <div class="ml-2">
-              <p class="small:max-w-2 text-light">24/24 Support.</p>
+              <div class="rotate">
+                <i class="icon-line-top"></i>
+                <i class="icon-line-center"></i>
+                <i class="icon-line-bottom"></i>
+              </div>
             </div>
           </div>
         </div>
-        <div class="column is-6">
-          <img
-            class="light-image-block"
-            src="/img/illustrations/feature-2.svg"
-            alt=""
+      </div>
+      <div
+        class="right"
+        :class="{
+            'is-active': mobileOpen,
+            '': !mobileOpen
+        }"
+      >
+        <a href="https://cssninja.io/product/minimal" class="nav-link"
+          >Product</a
+        >
+        <a href="#template-demos" class="nav-link scroll-link">Demos</a>
+        <a href="https://docs.cssninja.io/gulp-alpine/" class="nav-link"
+          >Documentation</a
+        >
+        <label class="theme-toggle">
+          <input
+            type="checkbox"
+            x-on:change="toggleTheme()"
+            :checked="$store.app.isDark"
           />
-          <img
-            class="dark-image-block"
-            src="/img/illustrations/feature-2-dark.svg"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section has-pseudo-lines">
-  <div class="container">
-    <div class="py-6">
-      <div class="columns is-vcentered b-centered-tablet-p">
-        <div class="column is-6">
-          <img
-            class="light-image-block"
-            src="/img/illustrations/feature-3.svg"
-            alt=""
-          />
-          <img
-            class="dark-image-block"
-            src="/img/illustrations/feature-3-dark.svg"
-            alt=""
-          />
-        </div>
-
-        <div class="column is-5">
-          <h3 class="title is-3 is-narrow">Track Time</h3>
-          <p class="py-2 max-w-4 small:max-w-full text-medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illud non
-            continuo, ut aeque incontentae. Duo Reges: constructio interrete. Si
-            qua in iis corrigere voluit, deteriora fecit. Sit enim idem caecus,
-            debilis.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section is-minimal has-pseudo-lines">
-  <div class="container">
-    <div class="py-6">
-      <div class="columns is-vcentered b-centered-tablet-p">
-        <div class="column is-5 is-offset-1">
-          <h3 class="title is-3 is-narrow">Create engagement</h3>
-          <p class="py-2 max-w-4 small:max-w-full text-medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illud non
-            continuo, ut aeque incontentae. Duo Reges: constructio interrete. Si
-            qua in iis corrigere voluit, deteriora fecit. Sit enim idem caecus,
-            debilis.
-          </p>
-          <div class="is-flex is-align-items-center py-1 j-center-tablet-p">
-            <div
-              class="
-                is-32x32
-                is-flex
-                is-justify-content-center
-                is-align-items-center
-                is-circle
-                bg-grey
-              "
-            >
-              <i
-                class="iconify text-light rem-125"
-                data-icon="ion:chatbubble-outline"
-              ></i>
-            </div>
-            <div class="ml-2">
-              <p class="small:max-w-2 text-light">Live chat support.</p>
-            </div>
-          </div>
-          <div class="is-flex is-align-items-center py-1 j-center-tablet-p">
-            <div
-              class="
-                is-32x32
-                is-flex
-                is-justify-content-center
-                is-align-items-center
-                is-circle
-                bg-grey
-              "
-            >
-              <i
-                class="iconify text-light rem-125"
-                data-icon="ion:color-fill-outline"
-              ></i>
-            </div>
-            <div class="ml-2">
-              <p class="small:max-w-2 text-light">Friendly customization.</p>
-            </div>
-          </div>
-          <div class="is-flex is-align-items-center py-1 j-center-tablet-p">
-            <div
-              class="
-                is-32x32
-                is-flex
-                is-justify-content-center
-                is-align-items-center
-                is-circle
-                bg-grey
-              "
-            >
-              <i
-                class="iconify text-light rem-125"
-                data-icon="ion:calendar-outline"
-              ></i>
-            </div>
-            <div class="ml-2">
-              <p class="small:max-w-2 text-light" class="rem-125">
-                30 days guarantee.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="column is-6">
-          <img
-            class="light-image-block"
-            src="/img/illustrations/feature-4.svg"
-            alt=""
-          />
-          <img
-            class="dark-image-block"
-            src="/img/illustrations/feature-4-dark.svg"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section has-pseudo-lines">
-  <div class="container">
-    <div class="has-text-centered py-12">
-      <h2 class="title is-3">Our Story</h2>
-      <p class="subtitle is-5 text-medium">
-        We weren't always amongst the top players
-      </p>
-    </div>
-
-    <div class="py-12">
-      <div class="columns is-vcentered">
-        <div class="column is-6 is-relative is-centered-portrait">
-          <div class="video-player-container is-square reversed-play">
-            <video
-              id="hero-player"
-              class="video-player"
-              playsinline
-              controls
-              data-poster="https://dummyimage.com/440x440/ededed/000000"
-              data-demo-poster="/img/video/poster-1c.jpg"
-            >
-              <source src="/img/video/hands.mp4" type="video/mp4" />
-              <source src="/img/video/hands.webm" type="video/webm" />
-            </video>
-          </div>
-        </div>
-        <div class="column is-6">
-          <h2 class="title is-2 small:text-centered">Our Values</h2>
-
-          <div class="columns is-multiline b-columns-half-tablet-p">
-            <div class="column is-6">
-              <div class="py-2 medium:py-4">
-                <h4 class="title is-6 is-narrow">Commitment</h4>
-                <p class="pt-2 max-w-3 text-medium">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  videbimus.
-                </p>
-              </div>
-            </div>
-            <div class="column is-6">
-              <div class="py-2 medium:py-4">
-                <h4 class="title is-6 is-narrow">Collaboration</h4>
-                <p class="pt-2 max-w-3 text-medium">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  videbimus.
-                </p>
-              </div>
-            </div>
-            <div class="column is-6">
-              <div class="py-2 medium:py-4">
-                <h4 class="title is-6 is-narrow">Diversity</h4>
-                <p class="pt-2 max-w-3 text-medium">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  videbimus.
-                </p>
-              </div>
-            </div>
-            <div class="column is-6">
-              <div class="py-2 medium:py-4">
-                <h4 class="title is-6 is-narrow">Remote Work</h4>
-                <p class="pt-2 max-w-3 text-medium">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  videbimus.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section is-minimal has-pseudo-lines">
-  <div class="container">
-    <div class="py-12 mx-auto max-w-8">
-      <div class="has-text-centered mb-8">
-        <h2 class="title is-3">Cross Platform</h2>
-      </div>
-      <div class="columns">
-        <div class="column is-6">
-          <p
-            class="text-medium small:text-centered small:mx-auto small:max-w-5"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idem iste,
-            inquam, de voluptate quid sentit? Hanc quoque iucunditatem, si vis,
-            transfer in animum; Erat enim Polemonis. Apparet statim, quae sint
-            officia, quae actiones. Ita prorsus, inquam.
-          </p>
-        </div>
-        <div class="column is-6">
-          <p
-            class="text-medium small:text-centered small:mx-auto small:max-w-5"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idem iste,
-            inquam, de voluptate quid sentit? Hanc quoque iucunditatem, si vis,
-            transfer in animum; Erat enim Polemonis. Apparet statim, quae sint
-            officia, quae actiones. Ita prorsus, inquam.
-          </p>
-        </div>
-      </div>
-
-      <div class="mx-auto is-flex is-justify-content-center py-8">
-        <img
-          class="inline-block size-52x52 object-cover mx-2 is-circle"
-          src="/img/logo/stacks/js.svg"
-          alt=""
-        />
-        <img
-          class="inline-block size-52x52 object-cover mx-2 is-circle"
-          src="/img/logo/stacks/vuejs.svg"
-          alt=""
-        />
-        <img
-          class="inline-block size-52x52 object-cover mx-2 is-circle"
-          src="/img/logo/stacks/reactjs.svg"
-          alt=""
-        />
-        <img
-          class="inline-block size-52x52 object-cover mx-2 is-circle"
-          src="/img/logo/stacks/angular.svg"
-          alt=""
-        />
-        <img
-          class="inline-block size-52x52 object-cover mx-2 is-circle"
-          src="/img/logo/stacks/nodejs.svg"
-          alt=""
-        />
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section has-pseudo-lines">
-  <div class="container">
-    <div class="has-text-centered py-6">
-      <h2 class="title is-3">Latest News</h2>
-      <p class="subtitle is-5 text-medium">
-        Stay tuned for nice and crunchy news
-      </p>
-    </div>
-
-    <div class="py-12">
-      <div class="columns b-columns-half-tablet-p">
-        <div class="column is-4">
-          <div class="card">
-            <div class="card-content">
-              <div class="media is-align-items-center">
-                <div class="media-left">
-                  <img
-                    class="
-                      block
-                      size-44x44
-                      is-circle
-                      has-border has-light-shadow
-                    "
-                    src="https://dummyimage.com/120x120/ededed/000000"
-                    data-demo-src="/img/photo/avatars/1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="media-content">
-                  <p class="subtitle rem-80 text-uppercase text-light">News</p>
-                  <p class="title is-6">We just released 1.4.2</p>
-                </div>
-              </div>
-
-              <div class="content">
-                <p class="text-medium">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus nec iaculis mauris.
-                </p>
-              </div>
-              <div
-                class="
-                  is-flex is-align-items-center is-justify-content-space-between
-                "
-              >
-                <div>
-                  <a class="action-link" href="#">
-                    <span>Read More</span>
-                    <i class="iconify" data-icon="feather:arrow-right"></i>
-                  </a>
-                </div>
-                <div class="is-flex is-align-items-center">
-                  <div class="is-flex is-align-items-center text-light">
-                    <i class="iconify" data-icon="feather:eye"></i>
-                    <span class="ml-1">327</span>
-                  </div>
-                  <div class="mx-3"></div>
-                  <div class="is-flex is-align-items-center text-light">
-                    <i class="iconify" data-icon="feather:message-circle"></i>
-                    <span class="ml-1">12</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-image">
-              <img
-                class="block"
-                src="https://dummyimage.com/720x400/ededed/000000"
-                data-demo-src="/img/photo/posts/1.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div class="column is-4">
-          <div class="card">
-            <div class="card-content">
-              <div class="media is-align-items-center">
-                <div class="media-left">
-                  <img
-                    class="
-                      block
-                      size-44x44
-                      is-circle
-                      has-border has-light-shadow
-                    "
-                    src="https://dummyimage.com/120x120/ededed/000000"
-                    data-demo-src="/img/photo/avatars/2.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="media-content">
-                  <p class="subtitle rem-80 text-uppercase text-light">Tech</p>
-                  <p class="title is-6">5 tips to handle pressure</p>
-                </div>
-              </div>
-
-              <div class="content">
-                <p class="text-medium">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus nec iaculis mauris.
-                </p>
-              </div>
-              <div
-                class="
-                  is-flex is-align-items-center is-justify-content-space-between
-                "
-              >
-                <div>
-                  <a class="action-link" href="#">
-                    <span>Read More</span>
-                    <i class="iconify" data-icon="feather:arrow-right"></i>
-                  </a>
-                </div>
-                <div class="is-flex is-align-items-center">
-                  <div class="is-flex is-align-items-center text-light">
-                    <i class="iconify" data-icon="feather:eye"></i>
-                    <span class="ml-1">1.4k</span>
-                  </div>
-                  <div class="mx-3"></div>
-                  <div class="is-flex is-align-items-center text-light">
-                    <i class="iconify" data-icon="feather:message-circle"></i>
-                    <span class="ml-1">195</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-image">
-              <img
-                class="block"
-                src="https://dummyimage.com/720x400/ededed/000000"
-                data-demo-src="/img/photo/posts/2.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div class="column is-4">
-          <div class="card">
-            <div class="card-content">
-              <div class="media is-align-items-center">
-                <div class="media-left">
-                  <img
-                    class="
-                      block
-                      size-44x44
-                      is-circle
-                      has-border has-light-shadow
-                    "
-                    src="https://dummyimage.com/120x120/ededed/000000"
-                    data-demo-src="/img/photo/avatars/3.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="media-content">
-                  <p class="subtitle rem-80 text-uppercase text-light">
-                    Tutorials
-                  </p>
-                  <p class="title is-6">An article title</p>
-                </div>
-              </div>
-
-              <div class="content">
-                <p class="text-medium">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus nec iaculis mauris.
-                </p>
-              </div>
-              <div
-                class="
-                  is-flex is-align-items-center is-justify-content-space-between
-                "
-              >
-                <div>
-                  <a class="action-link" href="#">
-                    <span>Read More</span>
-                    <i class="iconify" data-icon="feather:arrow-right"></i>
-                  </a>
-                </div>
-                <div class="is-flex is-align-items-center">
-                  <div class="is-flex is-align-items-center text-light">
-                    <i class="iconify" data-icon="feather:eye"></i>
-                    <span class="ml-1">862</span>
-                  </div>
-                  <div class="mx-3"></div>
-                  <div class="is-flex is-align-items-center text-light">
-                    <i class="iconify" data-icon="feather:message-circle"></i>
-                    <span class="ml-1">72</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-image">
-              <img
-                class="block"
-                src="https://dummyimage.com/720x400/ededed/000000"
-                data-demo-src="/img/photo/posts/3.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section">
-  <div class="container">
-    <div class="has-text-centered">
-      <p class="subtitle mx-auto max-w-5 text-medium">
-        Decentralized, secure and private. Minimal is on it's way to
-        revolutionize all aspects of web design.
-      </p>
-      <div class="buttons is-centered mt-4 mb-6">
-        <a class="button is-primary is-long-2 is-raised" href="#"
-          >Join the Revolution</a
+          <span class="theme-toggle-inner">
+            <i class="sun-icon iconify" data-icon="feather:sun"></i>
+            <i class="moon-icon iconify" data-icon="feather:moon"></i>
+          </span>
+        </label>
+        <a
+          href="https://support.cssninja.io"
+          class="button is-solid is-long-2 raised"
+          >Get Support</a
         >
       </div>
     </div>
+  </div>
 
-    <div class="has-text-centered py-8">
-      <h3 class="title is-5">Great Companies that already use Minimal</h3>
+  <!--Hero-->
+  <div class="cssninja-hero">
+    <img
+      class="plant-pattern filter-gray"
+      src="/img/demo/plant-pattern.svg"
+      alt="pattern"
+    />
+    <div class="container">
+      <div class="cssninja-hero-inner">
+        <div class="hero-caption mx-auto max-w-6">
+          <h1 class="title is-1 is-bold is-narrow">Minimal.</h1>
+          <p class="product-stacks">
+            Bulma + Alpine JS Minimalistic UI Kit
+          </p>
+          <h3 class="subtitle is-5">
+            Minimal is a well designed monochrome UI kit template that will help
+            you jumpstart your development project seamlessly.
+          </h3>
+          <div class="buttons is-centered">
+            <a
+              href="https://cssninja.io/product/minimal"
+              class="button is-primary raised scroll-link"
+              >Buy Now</a
+            >
+            <a href="#get-started" class="button is-solid scroll-link"
+              >Discover</a
+            >
+          </div>
+          <div class="product-stack product-stack-1 filter-gray">
+            <img src="/img/stacks/html5-light.svg" alt="stack" />
+          </div>
+          <div class="product-stack product-stack-2 filter-gray">
+            <img src="/img/stacks/alpinejs-light.svg" alt="stack" />
+          </div>
+          <div class="product-stack product-stack-3 filter-gray">
+            <img src="/img/stacks/sass-light.svg" alt="stack" />
+          </div>
+          <div class="product-stack product-stack-4 filter-gray">
+            <img src="/img/stacks/gulp.svg" alt="stack" />
+          </div>
+          <div class="product-stack product-stack-5 filter-gray">
+            <img src="/img/stacks/bulma-light.svg" alt="stack" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <img
+      class="template-mockup light-image-block"
+      src="/img/demo/minimal-mockup.png"
+      alt="Minimal header image"
+    />
+    <img
+      class="template-mockup dark-image-block"
+      src="/img/demo/minimal-mockup-dark.png"
+      alt="Minimal header image"
+    />
+    <img class="plant-pot filter-gray" src="/img/demo/plant-pot.svg" alt="Plant" />
+  </div>
 
-      <div class="mx-auto max-w-8 max-w-tablet-p max-w-tp-4">
-        <div class="columns b-columns-half-mobile b-columns-third-tablet-p">
-          <div class="column px-5">
-            <img
-              class="inverted-filter"
-              src="./img/logo/brands/covenant.svg"
-              alt=""
-            />
+  <div class="section is-overflown">
+    <div class="container">
+      <div class="cssninja-template">
+        <div class="columns">
+          <div class="column is-8">
+            <!--Template info-->
+            <div class="template-info">
+              <!--Section-->
+              <div id="get-started" class="template-info-section">
+                <!--Section title-->
+                <div class="max-w-4 mb-5">
+                  <h2 class="title is-3 is-bold is-leading">Built with</h2>
+                  <p class="paragraph">
+                    Although it is an HTML template, Minimal relies on powerful
+                    stacks like Alpine JS v3.x and Bulma as a CSS framework,
+                    making you able to build beautiful apps.
+                  </p>
+                </div>
+
+                <!--Stacks-->
+                <div class="template-stacks">
+                  <div
+                    class="columns is-multiline b-columns-half-mobile b-flex-tablet-p"
+                  >
+                    <!--Stack-->
+                    <div class="column is-3">
+                      <div class="template-stack-card">
+                        <i
+                          class="iconify smaller"
+                          data-icon="logos:alpinejs-icon"
+                        ></i>
+                        <h3 class="title is-6 is-narrow">Alpine JS</h3>
+                        <p class="paragraph rem-85">Version 3.x</p>
+                      </div>
+                    </div>
+                    <!--Stack-->
+                    <div class="column is-3">
+                      <div class="template-stack-card">
+                        <i class="iconify" data-icon="logos:bulma"></i>
+                        <h3 class="title is-6 is-narrow">Bulma</h3>
+                        <p class="paragraph rem-85">Version 9.x</p>
+                      </div>
+                    </div>
+                    <!--Stack-->
+                    <div class="column is-3">
+                      <div class="template-stack-card">
+                        <i class="iconify" data-icon="logos:sass"></i>
+                        <h3 class="title is-6 is-narrow">Sass</h3>
+                        <p class="paragraph rem-85">Dart Sass</p>
+                      </div>
+                    </div>
+                    <!--Stack-->
+                    <div class="column is-3">
+                      <div class="template-stack-card">
+                        <i class="iconify" data-icon="logos:gulp"></i>
+                        <h3 class="title is-6 is-narrow">Gulp</h3>
+                        <p class="paragraph rem-85">Version 4.x</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Section-->
+              <div class="template-info-section">
+                <!--Section title-->
+                <div class="max-w-4 mb-5">
+                  <h2 class="title is-3 is-bold is-leading">Features</h2>
+                  <p class="paragraph">
+                    Minimal ships with a lot of features to make your developer
+                    and customer experiences as nice as possible, without the
+                    hassle and unecessary effort.
+                  </p>
+                </div>
+
+                <!--Features-->
+                <div class="template-features">
+                  <div class="columns is-multiline b-columns-third-tablet-p">
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i
+                          class="iconify"
+                          data-icon="ph:circles-three-duotone"
+                        ></i>
+                        <h3 class="title is-6 is-leading">Modern UI</h3>
+                        <p class="paragraph rem-90">
+                          A clean, well designed and well integrated UI for your
+                          app.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i
+                          class="iconify"
+                          data-icon="ph:terminal-window-duotone"
+                        ></i>
+                        <h3 class="title is-6 is-leading">Clean code</h3>
+                        <p class="paragraph rem-90">
+                          A clean code structure is there to help you with your
+                          workflow.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i
+                          class="iconify"
+                          data-icon="ph:moon-stars-duotone"
+                        ></i>
+                        <h3 class="title is-6 is-leading">Native dark mode</h3>
+                        <p class="paragraph rem-90">
+                          Minimal uses native CSS variables and makes theming
+                          super easy.
+                        </p>
+                      </div>
+                    </div>
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i
+                          class="iconify"
+                          data-icon="ph:globe-hemisphere-west-duotone"
+                        ></i>
+                        <h3 class="title is-6 is-leading">RTL support</h3>
+                        <p class="paragraph rem-90">
+                          Minimal supports RTL based layouts, just switch the
+                          stylesheet.
+                        </p>
+                      </div>
+                    </div>
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i
+                          class="iconify"
+                          data-icon="ph:github-logo-duotone"
+                        ></i>
+                        <h3 class="title is-6 is-leading">GitHub access</h3>
+                        <p class="paragraph rem-90">
+                          We grant you access to the private GitHub repo for
+                          live updates.
+                        </p>
+                      </div>
+                    </div>
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i
+                          class="iconify"
+                          data-icon="ph:clock-clockwise-duotone"
+                        ></i>
+                        <h3 class="title is-6 is-leading">Lifetime updates</h3>
+                        <p class="paragraph rem-90">
+                          You're entitled to receive lifetime updates for this
+                          product.
+                        </p>
+                      </div>
+                    </div>
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i class="iconify" data-icon="ph:books-duotone"></i>
+                        <h3 class="title is-6 is-leading">Documentation</h3>
+                        <p class="paragraph rem-90">
+                          An extensive documentation helps you setting up
+                          everything.
+                        </p>
+                      </div>
+                    </div>
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i class="iconify" data-icon="ph:parachute-duotone"></i>
+                        <h3 class="title is-6 is-leading">Support</h3>
+                        <p class="paragraph rem-90">
+                          A dedicated customer support portal to post your
+                          requests.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Section-->
+              <div class="template-info-section">
+                <!--Section title-->
+                <div class="max-w-4 mb-5">
+                  <h2 class="title is-3 is-bold is-leading">Demo Pages</h2>
+                  <p class="paragraph">
+                    Minimal ships with more than 13 superb demo pages to help you
+                    get started as fast as possible, and build an outstanding
+                    and memorable project.
+                  </p>
+                </div>
+
+                <!--Template demos-->
+                <div
+                  id="template-demos"
+                  class="template-demos"
+                  x-data="initRenderDemos()"
+                >
+                  <div class="columns is-multiline b-columns-third-tablet-p">
+                    <template x-for="screenshot in screenshots">
+                      <div class="column is-6 has-text-centered">
+                        <figure class="demo-wrapper">
+                          <template x-if="screenshot.new">
+                            <span class="new-tag">New</span>
+                          </template>
+
+                          <div class="image-wrapper">
+                            <img
+                              class="light-image-block"
+                              x-bind:data-src="screenshot.screenshotLight"
+                              alt="screenshot light image"
+                              data-lazy-load
+                            />
+                            <img
+                              class="dark-image-block"
+                              x-bind:data-src="screenshot.screenshotDark"
+                              alt="screenshot dark image"
+                              data-lazy-load
+                            />
+                          </div>
+
+                          <div class="circle-overlay is-landing"></div>
+                          <div class="demo-info has-text-centered">
+                            <div class="wrapper">
+                              <div
+                                class="demo-title"
+                                x-text="screenshot.name"
+                              ></div>
+                              <div class="demo-link">
+                                <a
+                                  class="is-dm"
+                                  x-bind:href="screenshot.link"
+                                  target="_blank"
+                                  >Go to demo
+                                  <i
+                                    class="iconify"
+                                    data-icon="ph:arrow-right-bold"
+                                  ></i
+                                ></a>
+                              </div>
+                            </div>
+                          </div>
+                        </figure>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </div>
+
+              <!--Section-->
+              <div class="template-info-section">
+                <!--Section title-->
+                <div class="max-w-4 mb-5">
+                  <h2 class="title is-3 is-bold is-leading">FAQs</h2>
+                  <p class="paragraph">
+                    You probably already have a lot of questions. You can open a
+                    support ticket, or read some answers to the most common
+                    questions asked by our customers.
+                  </p>
+                </div>
+
+                <!--Template FAQ-->
+                <div class="template-faq">
+                  <div class="columns">
+                    <div class="column">
+                      <div
+                        class="accordion"
+                        x-data="initFaqAccordion()"
+                        x-init="setup()"
+                      >
+                        <div class="accordion-item">
+                          <button id="accordion-button-1" aria-expanded="false">
+                            <span class="accordion-title"
+                              >What is the difference between regular and
+                              extended?</span
+                            ><span class="icon" aria-hidden="true"></span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              The main difference between our licenses is the
+                              number of projects that you can build with our
+                              templates. If you're building a single project,
+                              the <a>regular license</a> is for you. However, if
+                              you are a professional developer or even an
+                              agency, you should consider purchasing an
+                              <a>extended license</a>, which will let you build
+                              up to 10 projects with the same license, saving up
+                              more than 30% on your purchase.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button id="accordion-button-2" aria-expanded="false">
+                            <span class="accordion-title"
+                              >What about licensing and SaaS projects?</span
+                            ><span class="icon" aria-hidden="true"></span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Unlike other platforms, it doesn't matter to us if
+                              your customers will need to pay to get access to
+                              your product. The price remains the same, whatever
+                              the type of project that you are building.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button id="accordion-button-3" aria-expanded="false">
+                            <span class="accordion-title"
+                              >What about theme customization?</span
+                            ><span class="icon" aria-hidden="true"></span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Theme customization is not part of our regular
+                              services and therefore not included in a product
+                              purchase. If you need customization services, feel
+                              free to reach us and make sure to send us your
+                              requirements so we can issue a quote for you or
+                              your company.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button id="accordion-button-4" aria-expanded="false">
+                            <span class="accordion-title"
+                              >What about the support scope?</span
+                            ><span class="icon" aria-hidden="true"></span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Our <a>support policy</a> is very clear. We only
+                              support what is directly related to the template
+                              UI. Anything else remains optional. We do not
+                              support 3rd party plugins as well though we can
+                              provide some guidance on how to use them best, but
+                              not on how to implement them or fix your own
+                              implementation.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button id="accordion-button-5" aria-expanded="false">
+                            <span class="accordion-title"
+                              >Can I be refunded if I need to?</span
+                            ><span class="icon" aria-hidden="true"></span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              If the product doesn't suit your needs you can
+                              always ask us to get a refund under 14 days after
+                              product purchase. After, that delay you won't be
+                              eligible for a refund anymore. Refund requests
+                              must be motivated and have a valid and reasonnable
+                              reason to be approved. For more details, please
+                              take a look at our <a>refund policy</a>.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="column px-5">
-            <img
-              class="inverted-filter"
-              src="./img/logo/brands/kromo.svg"
-              alt=""
-            />
-          </div>
-          <div class="column px-5">
-            <img
-              class="inverted-filter"
-              src="./img/logo/brands/infinite.svg"
-              alt=""
-            />
-          </div>
-          <div class="column px-5">
-            <img
-              class="inverted-filter"
-              src="./img/logo/brands/gutwork.svg"
-              alt=""
-            />
-          </div>
-          <div class="column px-5">
-            <img
-              class="inverted-filter"
-              src="./img/logo/brands/tribe.svg"
-              alt=""
-            />
+          <div class="column is-4">
+            <div x-data="initPurchaseCard()" class="purchase-card">
+              <div class="purchase-card-tabs">
+                <div class="inner-tabs">
+                  <a
+                    data-tab="regular"
+                    @click.prevent="toggleTabs($event)"
+                    :class="{
+                      'is-active': activeTab === 'regular'
+                    }"
+                    >Regular</a
+                  >
+                  <a
+                    data-tab="premium"
+                    @click.prevent="toggleTabs($event)"
+                    :class="{
+                      'is-active': activeTab === 'premium'
+                    }"
+                    >Premium</a
+                  >
+                  <a
+                    data-tab="extended"
+                    @click.prevent="toggleTabs($event)"
+                    :class="{
+                      'is-active': activeTab === 'extended'
+                    }"
+                    >Extended</a
+                  >
+                  <span class="naver"></span>
+                </div>
+
+                <div class="inner-tabs-content">
+                  <div class="inner-content">
+                    <!--Regular price-->
+                    <div x-show="activeTab === 'regular'" class="price-block">
+                      <h3 class="price-value">$49</h3>
+                      <div class="price-meta">
+                        <h4>Regular license</h4>
+                        <p class="paragraph rem-85">
+                          Build a single project for you or one of your
+                          customers.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!--Premium price-->
+                    <div x-show="activeTab === 'premium'" class="price-block">
+                      <h3 class="price-value">$69</h3>
+                      <div class="price-meta">
+                        <h4>Premium license</h4>
+                        <p class="paragraph rem-85">
+                          Same as regular with private Github access.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!--Extended price-->
+                    <div x-show="activeTab === 'extended'" class="price-block">
+                      <h3 class="price-value">$349</h3>
+                      <div class="price-meta">
+                        <h4>Extended license</h4>
+                        <p class="paragraph rem-85">
+                          Build up to 10 projects for you or your customers.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!--Benefits-->
+                    <div class="benefits">
+                      <ul>
+                        <li x-show="activeTab !== 'extended'">
+                          <span>Up to 1 customer project</span>
+                        </li>
+                        <li x-show="activeTab === 'extended'">
+                          <span>Up to 10 customer projects</span>
+                        </li>
+                        <li
+                          :class="{
+                            'text-linethrough is-disabled': activeTab === 'regular'
+                          }"
+                        >
+                          <span>Access to private repo</span>
+                        </li>
+                        <li>
+                          <span>Lifetime updates</span>
+                        </li>
+                        <li>
+                          <span>Support answers under 48h</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!--Action-->
+                    <div class="purchase-action">
+                      <a
+                        href="https://cssninja.io/product/minimal"
+                        class="button is-primary is-fullwidth raised"
+                        >Purchase Now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="section template-cta">
+    <div class="container">
+      <div class="inner">
+        <div class="columns is-vcentered">
+          <div class="column is-5">
+            <div class="cta-caption mx-auto max-w-6">
+              <h1 class="title is-2 is-bold">Ready to dive in?</h1>
+              <h3 class="subtitle is-5">
+                Forget about the hassle, about spaghetti sauce template code and
+                start working with a clean and professional UI template.
+              </h3>
+              <div class="buttons -mt-2">
+                <a
+                  href="https://cssninja.io/product/minimal"
+                  class="button is-primary raised"
+                  >Buy Now</a
+                >
+                <a
+                  href="https://docs.cssninja.io/gulp-alpine/"
+                  class="button is-solid"
+                  >Read Docs</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="column is-6 is-offset-1">
+            <div class="template-image-wrapper">
+              <img
+                class="template-image light-image-block"
+                src="/img/demo/minimal-mockup.png"
+                alt="Minimal header image"
+              />
+              <img
+                class="template-image dark-image-block"
+                src="/img/demo/minimal-mockup-dark.png"
+                alt="Minimal header image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Footer-->
+  <footer class="template-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="https://cssninja.io" class="footer-logo">
+          <img
+            class="inverted-filter"
+            src="/img/logo/cssninja.svg"
+            alt="css ninja logo"
+          />
+          <span>&copy; 2022-2023</span>
+          <span>All Rights Reserved.</span>
+        </a>
+
+        <div class="footer-socials">
+          <a href="https://github.com/cssninjaStudio" class="social-link">
+            <i class="iconify" data-icon="fa:github"></i>
+            <span class="is-sr-only">GitHub</span>
+          </a>
+          <a href="https://www.facebook.com/cssninjaStudio" class="social-link">
+            <i class="iconify" data-icon="fa:facebook"></i>
+            <span class="is-sr-only">Facebook</span>
+          </a>
+          <a href="https://twitter.com/cssninjaStudio" class="social-link">
+            <i class="iconify" data-icon="fa:twitter"></i>
+            <span class="is-sr-only">Twitter</span>
+          </a>
+          <a href="https://dribbble.com/DrissChelouati" class="social-link">
+            <i class="iconify" data-icon="fa:dribbble"></i>
+            <span class="is-sr-only">Twitter</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>

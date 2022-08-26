@@ -5,7 +5,6 @@
 body {
   background: var(--html-bg-color);
   transition: background-color 0.3s;
-  overflow: hidden;
 }
 
 code {
@@ -22,47 +21,113 @@ hr {
   }
 }
 
-
 a {
-  &.action-link, &.back-link {
+  &.action-link,
+  &.back-link {
     display: inline-flex;
     align-items: center;
     font-family: var(--font);
     font-weight: 500;
     color: var(--action-link-color);
-    transition: color .3s, opacity .3s;
-  
+    transition: color 0.3s, opacity 0.3s;
+
     .iconify {
-      transition: transform .3s;
+      transition: transform 0.3s;
     }
-  
+
     &:hover {
       color: var(--action-link-color-hover);
-      opacity: .8;
+      opacity: 0.8;
     }
   }
-  
+
   &.action-link {
     .iconify {
-      margin-left: .25rem;
+      margin-#{$start-direction}: 0.25rem;
     }
-  
+
     &:hover {
       .iconify {
-        transform: translateX(.25rem);
+        transform: translateX(0.25rem);
       }
     }
   }
-  
+
   &.back-link {
     .iconify {
-      margin-right: .25rem;
+      margin-#{$end-direction}: 0.25rem;
     }
-  
+
     &:hover {
       .iconify {
-        transform: translateX(-.25rem);
+        transform: translateX(-0.25rem);
       }
     }
+  }
+
+  &.hover-link {
+    color: var(--primary);
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--action-link-color-hover);
+    }
+  }
+
+  &.icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: var(--wrap-muted-color);
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--action-link-color-hover);
+    }
+  }
+
+  &.slide-link {
+    position: relative;
+    font-size: 0.95rem;
+    font-family: var(--font);
+    color: var(--primary);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.15rem;
+      #{$start-direction}: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s;
+    }
+
+    &:hover {
+      color: var(--primary);
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &.is-default:not(:hover) {
+      color: var(--light-text);
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    &:not(.has-sticky) {
+      overflow-x: hidden;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    overflow: hidden;
   }
 }

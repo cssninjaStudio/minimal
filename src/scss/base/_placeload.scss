@@ -42,16 +42,16 @@
     display: block;
     min-width: 160px;
     max-width: 160px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-#{$start-direction}: auto;
+    margin-#{$end-direction}: auto;
   }
 
   &.subtitle-shape {
     display: block;
     min-width: 80px;
     max-width: 80px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-#{$start-direction}: auto;
+    margin-#{$end-direction}: auto;
   }
 
   &.social-shape {
@@ -66,7 +66,7 @@
   }
 
   &.is-left {
-    margin-left: 0 !important;
+    margin-#{$start-direction}: 0 !important;
   }
 }
 

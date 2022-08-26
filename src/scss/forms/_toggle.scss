@@ -65,10 +65,10 @@
   i {
     position: relative;
     display: inline-block;
-    margin-right: 0.5rem;
+    margin-#{$end-direction}: 0.5rem;
     width: 46px;
     height: 26px;
-    background-color: #e6e6e6;
+    background-color: var(--button-base-border-color);
     border-radius: 23px;
     vertical-align: text-bottom;
     transition: all 0.3s linear;
@@ -76,10 +76,10 @@
     &::before {
       content: "";
       position: absolute;
-      left: 0;
+      #{$start-direction}: 0;
       width: 42px;
       height: 22px;
-      background-color: var(--white);
+      background-color: var(--button-base-bg-color);
       border-radius: 11px;
       transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
       transition: all 0.25s linear;
@@ -88,7 +88,7 @@
     &::after {
       content: "";
       position: absolute;
-      left: 0;
+      #{$start-direction}: 0;
       width: 22px;
       height: 22px;
       background-color: var(--white);
@@ -138,16 +138,16 @@
 }
 
 /* ==========================================================================
-  2. Ninja Toggle
-  ========================================================================== */
+2. Icon Toggle
+========================================================================== */
 
-.ninja-toggle {
+.icon-toggle {
   position: relative;
 
   input {
     position: absolute;
     top: 0;
-    left: 0;
+    #{$start-direction}: 0;
     z-index: -1;
     opacity: 0;
 
@@ -156,7 +156,7 @@
         span {
           &.track {
             .track-knob {
-              margin-left: 22px;
+              margin-#{$start-direction}: 22px;
               transform: rotate(360deg);
               background: var(--primary);
               border-color: var(--primary);
@@ -167,14 +167,14 @@
               }
 
               svg {
-                &.sun {
+                &.inactive {
                   display: none;
-                  stroke-width: var(--dark-text);
+                  color: var(--title-color);
                 }
 
-                &.moon {
+                &.active {
                   display: block;
-                  stroke: var(--white);
+                  color: var(--white);
                 }
               }
             }
@@ -197,20 +197,20 @@
         .track-inner {
           height: 11px;
           width: 42px;
-          background: var(--placeholder);
+          background: var(--track-bg-color);
           border-radius: 100px;
         }
 
         .track-knob {
           position: absolute;
           top: -8px;
-          left: -2px;
+          #{$start-direction}: -2px;
           height: 26px;
           width: 26px;
           border-radius: 50%;
-          border: 1px solid darken(var(--fade-grey), 3%);
+          border: 1px solid var(--wrap-border-color);
           box-shadow: var(--light-box-shadow);
-          background: var(--white);
+          background: var(--wrap-bg-color);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -227,13 +227,13 @@
             height: 14px;
             width: 14px;
             stroke-width: 1.6px;
-            stroke: var(--dark-text);
+            color: var(--title-color);
 
-            &.sun {
+            &.inactive {
               display: block;
             }
 
-            &.moon {
+            &.active {
               display: none;
             }
           }
@@ -244,8 +244,8 @@
 }
 
 /* ==========================================================================
-  3. Theme Toggle
-  ========================================================================== */
+3. Theme Toggle
+========================================================================== */
 
 .theme-toggle {
   position: relative;
@@ -255,7 +255,7 @@
   input {
     position: absolute;
     top: 0;
-    left: 0;
+    #{$start-direction}: 0;
     height: 100%;
     width: 100%;
     opacity: 0%;
@@ -291,7 +291,7 @@
     .moon-icon {
       position: absolute;
       top: 50%;
-      left: 50%;
+      #{$start-direction}: 50%;
       display: block;
       opacity: 0%;
       transition: transform 0.3s, opacity 0.3s;
@@ -305,12 +305,35 @@
     }
 
     .sun-icon {
-      transform: translate(-48%, -50%);
+      transform: translate(-50%, -50%);
       opacity: 100%;
     }
 
     .moon-icon {
       transform: translate(-45%, -150%);
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .navbar {
+    &:not(.is-scrolled):not(.is-solid):not(.is-mobile) {
+      .navbar-item {
+        &.is-split {
+          .theme-toggle .theme-toggle-inner {
+            background: transparent !important;
+            border-color: transparent !important;
+
+            .sun-icon, .moon-icon {
+              color: var(--white);
+
+              circle, path {
+                fill: var(--white);
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

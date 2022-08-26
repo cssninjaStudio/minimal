@@ -3,6 +3,8 @@ export function initNavbar() {
     scrolled: false,
     height: 60,
     mobileOpen: false,
+    megamenuOpened: false,
+    openedMegamenu: "megamenu-1",
     scroll() {
       let scrollValue = window.scrollY;
       if (scrollValue >= this.height) {
@@ -11,6 +13,14 @@ export function initNavbar() {
         this.scrolled = false;
       }
       this.searchExpanded = false;
+    },
+
+    scrollTo(el) {
+      window.scroll({
+        behavior: "smooth",
+        left: 0,
+        top: el.getBoundingClientRect().top + window.scrollY - 200,
+      });
     },
 
     openMobileMenu() {
@@ -35,6 +45,17 @@ export function initNavbar() {
             });
           };
         });
+
+      if (window.location.hash) {
+        const hash = window.location.hash;
+        const target = document.getElementById(hash.substring(1));
+
+        if (target) {
+          setTimeout(() => {
+            this.scrollTo(target);
+          }, 1000);
+        }
+      }
     },
   };
 }

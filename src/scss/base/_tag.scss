@@ -18,13 +18,13 @@
   }
 
   &.is-rounded {
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-#{$start-direction}: 1em;
+    padding-#{$end-direction}: 1em;
   }
 
   &.is-curved {
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-#{$start-direction}: 1em;
+    padding-#{$end-direction}: 1em;
     border-radius: 0.5rem;
   }
 
@@ -42,7 +42,13 @@
     background: var(--tag-solid-bg-color);
     border: 1px solid var(--tag-solid-border-color);
     color: var(--light-text);
-    line-height: 1.8;
+    line-height: 2.4;
+  }
+
+  &.is-thick {
+    border-width: 2px !important;
+    font-weight: 500;
+    line-height: 2.2;
   }
 
   &.is-primary {

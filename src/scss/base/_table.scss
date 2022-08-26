@@ -2,6 +2,15 @@
     1. Flex Table
 */
 
+.table {
+  font-family: var(--font);
+  background: transparent;
+
+  td, th {
+    vertical-align: middle;
+  }
+}
+
 /* ==========================================================================
 1. Flex Table
 ========================================================================== */
@@ -155,13 +164,13 @@
 
         .checkbox {
           padding: 0;
-          margin-left: 4px;
+          margin-#{$start-direction}: 4px;
         }
       }
 
       &.is-user,
       &.is-media {
-        padding-left: 0;
+        padding-#{$start-direction}: 0;
 
         &.is-grow {
           flex-grow: 2;
@@ -177,7 +186,7 @@
 
         > div span:not(.avatar) {
           display: block;
-          margin-left: 10px;
+          margin-#{$start-direction}: 10px;
         }
 
         > div {
@@ -199,17 +208,17 @@
               height: 14px;
               width: 14px;
               stroke-width: 1.6px;
-              margin-right: 4px;
+              margin-#{$end-direction}: 4px;
             }
 
             span {
               display: inline-block;
-              margin-left: 0;
+              margin-#{$start-direction}: 0;
               font-size: 0.9rem;
             }
 
             .flex-media {
-              margin-left: 10px;
+              margin-#{$start-direction}: 10px;
               margin-top: 4px;
             }
 
@@ -240,7 +249,7 @@
       }
 
       .cell-icon {
-        margin-right: 4px;
+        margin-#{$end-direction}: 4px;
         color: var(--light-text);
       }
 
@@ -255,7 +264,7 @@
         align-items: center;
 
         .meta {
-          margin-left: 6px;
+          margin-#{$start-direction}: 6px;
           line-height: 1.3;
 
           span {
@@ -312,8 +321,8 @@
       }
 
       .flex-table-item {
-        padding-left: 0;
-        padding-right: 0;
+        padding-#{$start-direction}: 0;
+        padding-#{$end-direction}: 0;
 
         .is-checkbox {
           display: none;
@@ -349,7 +358,7 @@
         justify-content: flex-start !important;
 
         .btn-group {
-          margin-left: auto;
+          margin-#{$start-direction}: auto;
         }
       }
 
@@ -361,10 +370,10 @@
 
       > span,
       > .is-pushed-mobile {
-        margin-left: auto;
+        margin-#{$start-direction}: auto;
 
         &.no-push {
-          margin-left: 0 !important;
+          margin-#{$start-direction}: 0 !important;
         }
       }
     }
@@ -415,6 +424,6 @@
   }
 
   .pagination-next {
-    margin-right: auto;
+    margin-#{$end-direction}: auto;
   }
 }

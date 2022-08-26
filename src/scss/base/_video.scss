@@ -18,7 +18,7 @@
     .plyr {
       position: absolute;
       top: 0;
-      left: 0;
+      #{$start-direction}: 0;
       height: 100%;
       width: 100%;
       display: block;
@@ -29,12 +29,12 @@
     position: relative;
     padding-top: 75%;
     width: 100%;
-    max-width: 840px;
+    //max-width: 840px;
 
     .plyr {
       position: absolute;
       top: 0;
-      left: 0;
+      #{$start-direction}: 0;
       height: 100%;
       width: 100%;
       display: block;
@@ -45,12 +45,12 @@
     position: relative;
     padding-top: 56.25%;
     width: 100%;
-    max-width: 840px;
+    //max-width: 840px;
 
     .plyr {
       position: absolute;
       top: 0;
-      left: 0;
+      #{$start-direction}: 0;
       height: 100%;
       width: 100%;
       display: block;
@@ -90,6 +90,12 @@
 .plyr--full-ui.plyr--video .plyr__control--overlaid {
   background: var(--primary) !important;
   box-shadow: var(--primary-box-shadow);
+
+  svg {
+    fill: var(--button-primary-color);
+    stroke: var(--button-primary-color);
+    stroke-width: 1.6px;
+  }
 }
 
 .plyr--video .plyr__control.plyr__tab-focus,
