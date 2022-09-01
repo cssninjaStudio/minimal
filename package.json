@@ -11,7 +11,6 @@
     "alpinejs": "^3.10.2",
     "bulma": "^0.9.4",
     "bulma-css-vars": "^0.7.0",
-    "codemirror": "^5.58.3",
     "lozad": "1.16.0",
     "js-datepicker": "^5.16.0",
     "autocompleter": "^6.1.0",

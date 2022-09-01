@@ -17,7 +17,6 @@ Alpine.persistedStore("app", {
 //Start Alpine JS
 Alpine.start();
 
-import { env } from "./libs/utils/constants";
 import { insertBgImages } from "./libs/utils/utils";
 import { initVideoPlayers } from "./libs/components/player/player";
 import { initMapBox } from "./libs/components/map/map";
@@ -29,12 +28,12 @@ document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     //Lazy Loading
     const lazy = initLazyLoading();
-    
+
     //Switch backgrounds
     const changeBackgrounds = insertBgImages();
 
     //Video Players
-    const players = initVideoPlayers(env);
+    const players = initVideoPlayers();
 
     //Maps
     const maps = initMapBox();
