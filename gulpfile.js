@@ -45,7 +45,6 @@ function setupBulma() {
 function compileSCSS() {
   console.log("\n\t" + logSymbols.info, "Compiling App SCSS..\n");
   return src(['src/scss/main.scss', 'src/scss/main-rtl.scss'])
-    .pipe(replace('{{PACKAGE_VERSION}}', packageJson.version))
     .pipe(sass({
       outputStyle: 'compressed',
       sourceComments: 'map',
@@ -62,6 +61,7 @@ function compileHTML() {
   console.log("\n\t" + logSymbols.info, "Compiling HTML..\n");
   panini.refresh();
   return src('src/pages/**/*.html')
+    .pipe(replace('{{PACKAGE_VERSION}}', packageJson.version))
     .pipe(panini({
       root: 'src/pages/',
       layouts: 'src/layouts/',
