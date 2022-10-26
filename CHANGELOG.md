@@ -1,0 +1,16 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [2.0.0](https://github.com/cssninjaStudio/minimal/compare/v1.1.0...v2.0.0) (2022-10-26)
+
+
+### Features
+
+* prepping release 2.0.0 ([2fec435](https://github.com/cssninjaStudio/minimal/commit/2fec4357a247abe85bca4d1e01812522987011ea))
+* tidy CSS ([8a84800](https://github.com/cssninjaStudio/minimal/commit/8a848005b048a188bd9f8f09699515d0d17def97))
+* update discord url ([590b309](https://github.com/cssninjaStudio/minimal/commit/590b309b9b24e046578434641702151e2ceb70c5))
+* update to Alpine v3, update dependencies, add bulma css vars ([f4ca3b1](https://github.com/cssninjaStudio/minimal/commit/f4ca3b15d071558676285b88eb711875beb6f8ef))
+* updated to v3 ([edba63f](https://github.com/cssninjaStudio/minimal/commit/edba63fe8d79dc7af2bed43501872c7568cd859d))
+* updated to v3 ([a752fce](https://github.com/cssninjaStudio/minimal/commit/a752fcef3b14625e1014be8f97062924b91856ba))
+* upgrade do ES module ([a542f63](https://github.com/cssninjaStudio/minimal/commit/a542f631eea3eef3a1f3fb8590d463a54ff046d6))
