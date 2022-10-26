@@ -1,9 +1,7 @@
 # 👋 Minimal
-> Minimal is a Landing Page UI template built by [cssninjaStudio](https://cssninja.io).
+> Minimal is a landing page kit UI template built by [cssninjaStudio](https://cssninja.io).
 
 [![cssninja-discord](https://img.shields.io/discord/785473098069311510?label=join%20us%20on%20discord&color=6944EC)](https://go.cssninja.io/discord)
-
-![Screenshot](https://media.cssninja.io/products/minimal/product.png "Minimal")
 
 ## ✌️ preview
 
@@ -12,52 +10,29 @@ Minimal is built with [Bulma](https://bulma.io) and [Alpine JS](https://github.c
 
 ## 👍 Features
 
-* Gulp 4 and nodejs 12.13.0 (minimum)
-* Bulma 0.9.3
+* Gulp 4 and nodejs 16.x (minimum)
+* Bulma 0.9.x
 * ES6 support
-* Alpine v3
+* Alpine v3.x
 
 ## 👌 Usage
 
-1. Install Dev Depedencies
+1. Install Depedencies
 
 ```sh
-yarn install
+pnpm i
 ```
 
-2. To start development server
+2. Run in dev mode
 
 ```sh
-yarn dev
+pnpm dev
 ```
 
-## 🍬 Update template colors
+3. Or build source
 
-Minimal is built with Sass but relies on native CSS variables with HSL for colors. To change the template theme colors:
-
-* Open bulma-css-vars.config.js and change the HSL value of the primary color:
-
-```
-primary: hsl(337, 78, 57),
-```
-
-* Then, edit the value of the primary, secondary and accent colors inside `src/scss/css-variables/colors.scss`:
-
-```
-// primary HSL (#e73c7d) // hsl(337, 78%, 57%)
-@include colorHsl("primary", 337, 78%, 57%);
-
-// secondary HSL (#7938f4) // hsl(261, 90%, 59%)
-@include colorHsl("secondary", 261, 90%, 59%);
-
-// accent HSL (#3bf486) // hsl(144, 89%, 59%)
-@include colorHsl("accent", 144, 89%, 59%);
-```
-
-* Once you're done, run the following command in your terminal:
-
-```
-yarn build:update-bulma-colors
+```sh
+pnpm build
 ```
 
 ## 🍔 Issues
@@ -72,9 +47,11 @@ If you've found an issue or a bug, you can report it in the issues section of th
 
 ## 🎉 More
 
+Get access to the [documentation](https://docs.cssninja.io/minimal).
+
 You liked Minimal? Check also our Envato portfolio [Css Ninja on Themeforest](https://themeforest.net/user/cssninjastudio/portfolio).
 
-Find more premium bulma templates on [Css Ninja](https://cssninja.io/).
+Find more premium app and website templates on [Css Ninja](https://cssninja.io/).
 
 ## 🚀 About Us
 
