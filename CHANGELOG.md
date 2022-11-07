@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/cssninjaStudio/minimal/compare/v2.0.0...v2.0.1) (2022-11-07)
+
+
+### Bug Fixes
+
+* video player poster ([929cf05](https://github.com/cssninjaStudio/minimal/commit/929cf054ebf4b4c9dbffbf4ea959bfe3953c148b))
+
 ## [2.0.0](https://github.com/cssninjaStudio/minimal/compare/v1.1.0...v2.0.0) (2022-10-26)
 
 
