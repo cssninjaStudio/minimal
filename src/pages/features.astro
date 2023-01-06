@@ -1,0 +1,297 @@
+---
+import Layout from "../layouts/Default.astro";
+import FeatureBlockOne from "../components/blocks/features/FeatureBlockOne.astro";
+import FeatureBlockTwo from "../components/blocks/features/FeatureBlockTwo.astro";
+import FeatureBlockThree from "../components/blocks/features/FeatureBlockThree.astro";
+import FeatureBlockFour from "../components/blocks/features/FeatureBlockFour.astro";
+import FeatureBlockFive from "../components/blocks/features/FeatureBlockFive.astro";
+import FeatureBlockSix from "../components/blocks/features/FeatureBlockSix.astro";
+import FeatureBlockSeven from "../components/blocks/features/FeatureBlockSeven.astro";
+import FeatureBlockEight from "../components/blocks/features/FeatureBlockEight.astro";
+import FeatureBlockNine from "../components/blocks/features/FeatureBlockNine.astro";
+import FeatureBlockTen from "../components/blocks/features/FeatureBlockTen.astro";
+import FeatureBlockEleven from "../components/blocks/features/FeatureBlockEleven.astro";
+import FeatureBlockTwelve from "../components/blocks/features/FeatureBlockTwelve.astro";
+import DoubleCta from "../components/DoubleCta.astro";
+const title = "Feature Blocks";
+---
+
+<Layout title={title}>
+  <div class="hero is-fullheight is-side is-left has-top-bg">
+    <img class="top-bg-alt" src="/img/bg/top-bg-alt.svg" alt="" />
+
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5">
+            <h1 class="title is-1 is-bold">Minimal feature sections.</h1>
+            <p class="subtitle is-5 b-centered-tablet-p text-medium">
+              Prebuilt feature sections that you can easily reuse or extend for
+              your needs.
+            </p>
+            <div class="buttons">
+              <a
+                href="#content-start"
+                class="button is-primary is-medium raised scroll-link"
+                >Explore</a
+              >
+              <a
+                href="https://docs.cssninja.io/minimal"
+                class="button is-primary is-outlined is-medium">Docs</a
+              >
+            </div>
+          </div>
+          <div class="column is-6 is-offset-1">
+            <img
+              class="light-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-1.svg"
+              alt=""
+            />
+            <img
+              class="dark-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-1-dark.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-start" class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined is-thick mb-2"
+          >Block V1</span
+        >
+        <h2 class="title is-3">Great features</h2>
+        <p class="subtitle is-5 text-medium">
+          everything you need for your project
+        </p>
+      </div>
+
+      <!-- Feature block v1 -->
+      <div class="pb-12">
+        <FeatureBlockOne />
+      </div>
+    </div>
+  </div>
+
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined is-thick mb-2"
+          >Block V2</span
+        >
+        <h2 class="title is-3">Made for winners</h2>
+        <p class="subtitle is-5 text-medium">
+          You won't grow without working with us
+        </p>
+      </div>
+
+      <!-- Feature block v2 -->
+      <div class="pb-12">
+        <FeatureBlockTwo />
+      </div>
+    </div>
+  </div>
+
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined is-thick mb-2"
+          >Block V3</span
+        >
+        <h2 class="title is-3">Learn more</h2>
+        <p class="subtitle is-5 text-medium">
+          Make your business health really count
+        </p>
+      </div>
+
+      <!-- Feature block v3 -->
+      <div class="pb-12">
+        <FeatureBlockThree />
+      </div>
+    </div>
+  </div>
+
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined is-thick mb-2"
+          >Block V4</span
+        >
+        <h2 class="title is-3">Yummy treats</h2>
+        <p class="subtitle is-5 text-medium">
+          Believe me, it tastes like heaven
+        </p>
+      </div>
+
+      <!-- Feature block v4 -->
+      <div class="pb-12">
+        <FeatureBlockFour />
+      </div>
+    </div>
+  </div>
+
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined is-thick mb-2"
+          >Block V5</span
+        >
+        <h2 class="title is-3">Move it.</h2>
+        <p class="subtitle is-5 text-medium">
+          A healthy life with a healthy condition
+        </p>
+      </div>
+
+      <!-- Feature block v5 -->
+      <div class="pb-12">
+        <FeatureBlockFive />
+      </div>
+    </div>
+  </div>
+
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined is-thick mb-2"
+          >Block V6</span
+        >
+        <h2 class="title is-3">Chill out.</h2>
+        <p class="subtitle is-5 text-medium">
+          No need to worry, we're here to back you up
+        </p>
+      </div>
+
+      <!-- Feature block v6 -->
+      <div class="pb-12">
+        <FeatureBlockSix />
+      </div>
+    </div>
+  </div>
+
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined is-thick mb-2"
+          >Block V7</span
+        >
+        <h2 class="title is-3">Managed workers</h2>
+        <p class="subtitle is-5 text-medium">
+          That will supply your production chain anytime you need it
+        </p>
+      </div>
+
+      <!-- Feature block v7 -->
+      <div class="pb-12">
+        <FeatureBlockSeven />
+      </div>
+    </div>
+  </div>
+
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined is-thick mb-2"
+          >Block V8</span
+        >
+        <h2 class="title is-3">Vintage Coupé</h2>
+        <p class="subtitle is-5 text-medium">
+          The very best automotive jewel for your collection
+        </p>
+      </div>
+
+      <!-- Feature block v8 -->
+      <div class="pb-12">
+        <FeatureBlockEight />
+      </div>
+    </div>
+  </div>
+
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined is-thick mb-2"
+          >Block V9</span
+        >
+        <h2 class="title is-3">Made for you</h2>
+        <p class="subtitle is-5 text-medium">
+          Whatever is your problem, we have a solution
+        </p>
+      </div>
+
+      <!-- Feature block v9 -->
+      <div class="pb-12">
+        <FeatureBlockNine />
+      </div>
+    </div>
+  </div>
+
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined is-thick mb-2"
+          >Block V10</span
+        >
+        <h2 class="title is-3">Popular models</h2>
+        <p class="subtitle is-5 text-medium">
+          The most popular models of our catalog
+        </p>
+      </div>
+
+      <!-- Feature block v10 -->
+      <div class="pb-12">
+        <FeatureBlockTen />
+      </div>
+    </div>
+  </div>
+
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined is-thick mb-2"
+          >Block V11</span
+        >
+        <h2 class="title is-3">Trouble Free.</h2>
+        <p class="subtitle is-5 text-medium">
+          Focus on your work, we do the rest
+        </p>
+      </div>
+
+      <!-- Feature block v11 -->
+      <div class="pb-12">
+        <FeatureBlockEleven />
+      </div>
+    </div>
+  </div>
+
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined is-thick mb-2"
+          >Block V12</span
+        >
+        <h2 class="title is-3">What we do</h2>
+        <p class="subtitle is-5 text-medium">
+          Take the time to learn more about us
+        </p>
+      </div>
+
+      <!-- Feature block v12 -->
+      <div class="pb-12">
+        <FeatureBlockTwelve />
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="section">
+    <div class="container">
+      <div class="py-6">
+        <DoubleCta />
+      </div>
+    </div>
+  </div>
+</Layout>

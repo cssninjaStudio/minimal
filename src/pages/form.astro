@@ -1,0 +1,305 @@
+---
+import Layout from '../layouts/Sticky.astro';
+import AutocompleteDemo from '../components/blocks/form/AutocompleteDemo.astro';
+import CheckboxDemo from '../components/blocks/form/CheckboxDemo.astro';
+import DatepickerDemo from '../components/blocks/form/DatepickerDemo.astro';
+import FormHorizontalDemo from '../components/blocks/form/FormHorizontalDemo.astro';
+import FormVerticalDemo from '../components/blocks/form/FormVerticalDemo.astro';
+import InputAddonsDemo from '../components/blocks/form/InputAddonsDemo.astro';
+import InputDemo from '../components/blocks/form/InputDemo.astro';
+import RadioDemo from '../components/blocks/form/RadioDemo.astro';
+import SelectDemo from '../components/blocks/form/SelectDemo.astro';
+import SwitchDemo from '../components/blocks/form/SwitchDemo.astro';
+import DoubleCta from '../components/DoubleCta.astro';
+const title = 'Form Blocks'
+---
+
+<Layout title={title}>
+  <div class="hero is-fullheight is-side is-left has-top-bg">
+    <img class="top-bg-alt" src="/img/bg/top-bg-alt.svg" alt="" />
+  
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5">
+            <h1 class="title is-1 is-bold">Minimal form elements.</h1>
+            <p class="subtitle is-5 b-centered-tablet-p text-medium">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sint ista
+              Graecorum; Hoc mihi.
+            </p>
+            <div class="buttons">
+              <a href="#content-start" class="button is-primary is-medium raised scroll-link">Explore</a>
+              <a href="https://docs.cssninja.io/minimal" class="button is-primary is-outlined is-medium">Docs</a>
+            </div>
+          </div>
+          <div class="column is-6 is-offset-1">
+            <img
+              class="light-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-7.svg"
+              alt=""
+            />
+            <img
+              class="dark-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-7-dark.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="content-start" class="section is-overflown">
+    <div class="container">
+      <div class="dual-layout">
+        <!-- Demo section -->
+        <div class="demo-section">
+          <!-- Block -->
+          <div id="form-inputs" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Form inputs</h2>
+              <p class="subtitle is-6 text-medium">
+                Form input variations and states
+              </p>
+            </div>
+  
+            <!-- Input -->
+            <div class="pb-12">
+              <InputDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="form-addons" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Input addons</h2>
+              <p class="subtitle is-6 text-medium">
+                Input addons variations and examples
+              </p>
+            </div>
+  
+            <!-- Input -->
+            <div class="pb-12">
+              <InputAddonsDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="form-selects" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Select</h2>
+              <p class="subtitle is-6 text-medium">
+                Select variations and examples
+              </p>
+            </div>
+  
+            <!-- Select -->
+            <div class="pb-12">
+              <SelectDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="form-datepicker" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Datepicker</h2>
+              <p class="subtitle is-6 text-medium">Date range picker example</p>
+            </div>
+  
+            <!-- Datepicker -->
+            <div class="pb-12">
+              <DatepickerDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="form-autocomplete" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Autocomplete</h2>
+              <p class="subtitle is-6 text-medium">
+                Autocomplete variations and examples
+              </p>
+            </div>
+  
+            <!-- Autocomplete -->
+            <div class="pb-12">
+              <AutocompleteDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="form-checkbox" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Checkbox</h2>
+              <p class="subtitle is-6 text-medium">
+                Checkbox variations and examples
+              </p>
+            </div>
+  
+            <!-- Checkbox -->
+            <div class="pb-12">
+              <CheckboxDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="form-radio" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Radio buttons</h2>
+              <p class="subtitle is-6 text-medium">
+                Radio button variations and examples
+              </p>
+            </div>
+  
+            <!-- Radio -->
+            <div class="pb-12">
+              <RadioDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="form-switch" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Switch</h2>
+              <p class="subtitle is-6 text-medium">
+                Switch variations and examples
+              </p>
+            </div>
+  
+            <!-- Switch -->
+            <div class="pb-12">
+              <SwitchDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="form-vertical" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Vertical form</h2>
+              <p class="subtitle is-6 text-medium">
+                Vertical form example
+              </p>
+            </div>
+  
+            <!-- Vertical form -->
+            <div class="pb-12">
+              <FormVerticalDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="form-horizontal" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Horizontal form</h2>
+              <p class="subtitle is-6 text-medium">
+                Horizontal form example
+              </p>
+            </div>
+  
+            <!-- Horizontal form -->
+            <div class="pb-12">
+              <FormHorizontalDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div class="demo-block">
+            <div class="py-6">
+              <DoubleCta />  
+            </div>
+          </div>
+        </div>
+  
+        <!-- Toc -->
+        <div class="demo-toc" x-data="initToc()">
+          <div>
+            <h4 class="toc-title">On this page</h4>
+            <ul>
+              <li>
+                <a
+                  :class="activeItem === 'form-inputs' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="form-inputs"
+                  >Form inputs</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'form-addons' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="form-addons"
+                  >Input addons</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'form-selects' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="form-selects"
+                  >Select</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'form-datepicker' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="form-datepicker"
+                  >Datepicker</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'form-autocomplete' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="form-autocomplete"
+                  >Autocomplete</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'form-checkbox' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="form-checkbox"
+                  >Checkbox</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'form-radio' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="form-radio"
+                  >Radio button</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'form-switch' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="form-switch"
+                  >Switch</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'form-vertical' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="form-vertical"
+                  >Vertical form</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'form-horizontal' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="form-horizontal"
+                  >Horizontal form</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</Layout>

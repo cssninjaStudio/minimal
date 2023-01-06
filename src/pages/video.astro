@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Default.astro';
+import VideoBlockOne from '../components/blocks/video/VideoBlockOne.astro';
+import VideoBlockTwo from '../components/blocks/video/VideoBlockTwo.astro';
+import VideoBlockThree from '../components/blocks/video/VideoBlockThree.astro';
+import DoubleCta from '../components/DoubleCta.astro';
+const title = 'Video Blocks'
+---
+
+<Layout title={title}>
+  <div class="hero is-fullheight is-side is-left has-top-bg">
+    <img class="top-bg-alt" src="/img/bg/top-bg-alt.svg" alt="" />
+  
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5">
+            <h1 class="title is-1 is-bold">Minimal video sections.</h1>
+            <p class="subtitle is-5 b-centered-tablet-p text-medium">
+              Prebuilt featured video sections to showcase anything related to
+              your business.
+            </p>
+            <div class="buttons">
+              <a
+                href="#content-start"
+                class="button is-primary is-medium raised scroll-link"
+                >Explore</a
+              >
+              <a
+                href="https://docs.cssninja.io/minimal"
+                class="button is-primary is-outlined is-medium"
+                >Docs</a
+              >
+            </div>
+          </div>
+          <div class="column is-6 is-offset-1">
+            <img
+              class="light-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-9.svg"
+              alt=""
+            />
+            <img
+              class="dark-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-9-dark.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="content-start" class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V1</span>
+        <h2 class="title is-3">1:1 Ratio</h2>
+        <p class="subtitle is-5 text-medium">
+          An overview of the company in less than 3 minutes
+        </p>
+      </div>
+  
+      <!-- Video block v1 -->
+      <div class="pb-12">
+        <VideoBlockOne />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V2</span>
+        <h2 class="title is-3">16:9 Ratio</h2>
+        <p class="subtitle is-5 text-medium">
+          An overview of the company in less than 3 minutes
+        </p>
+      </div>
+  
+      <!-- Video block v2 -->
+      <div class="pb-12">
+        <VideoBlockTwo />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V3</span>
+        <h2 class="title is-3">4:3 Ratio</h2>
+        <p class="subtitle is-5 text-medium">
+          An overview of the company in less than 3 minutes
+        </p>
+      </div>
+  
+      <!-- Video block v3 -->
+      <div class="pb-12">
+        <VideoBlockThree />  
+      </div>
+    </div>
+  </div>
+  
+  <!-- CTA -->
+  <div class="section">
+    <div class="container">
+      <div class="py-6">
+        <DoubleCta />  
+      </div>
+    </div>
+  </div>
+  
+</Layout>

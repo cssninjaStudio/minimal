@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Default.astro';
+import PostBlockOne from '../components/blocks/posts/PostBlockOne.astro';
+import PostBlockTwo from '../components/blocks/posts/PostBlockTwo.astro';
+import PostBlockThree from '../components/blocks/posts/PostBlockThree.astro';
+import PostBlockFour from '../components/blocks/posts/PostBlockFour.astro';
+import DoubleCta from '../components/DoubleCta.astro';
+const title = 'Post Blocks'
+---
+
+<Layout title={title}>
+  
+  <div class="hero is-fullheight is-side is-left has-top-bg">
+    <img class="top-bg-alt" src="/img/bg/top-bg-alt.svg" alt="" />
+  
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5">
+            <h1 class="title is-1 is-bold">Minimal post sections.</h1>
+            <p class="subtitle is-5 b-centered-tablet-p text-medium">
+              Different post grid layouts you can use to build your own website
+              and blog.
+            </p>
+            <div class="buttons">
+              <a
+                href="#content-start"
+                class="button is-primary is-medium raised scroll-link"
+                >Explore</a
+              >
+              <a
+                href="https://docs.cssninja.io/minimal"
+                class="button is-primary is-outlined is-medium"
+                >Docs</a
+              >
+            </div>
+          </div>
+          <div class="column is-6 is-offset-1">
+            <img
+              class="light-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-10.svg"
+              alt=""
+            />
+            <img
+              class="dark-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-10-dark.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="content-start" class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V1</span>
+        <h2 class="title is-3">Latest News</h2>
+        <p class="subtitle is-5 text-medium">
+          Stay tuned to our new feed and don't miss anything
+        </p>
+      </div>
+  
+      <!-- Posts block v1 -->
+      <div class="pb-12">
+        <PostBlockOne />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V2</span>
+        <h2 class="title is-3">Latest News</h2>
+        <p class="subtitle is-5 text-medium">
+          Stay tuned to our new feed and don't miss anything
+        </p>
+      </div>
+  
+      <!-- Posts block v2 -->
+      <div class="pb-12">
+        <PostBlockTwo />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V3</span>
+        <h2 class="title is-3">Latest News</h2>
+        <p class="subtitle is-5 text-medium">
+          Stay tuned to our new feed and don't miss anything
+        </p>
+      </div>
+  
+      <!-- Posts block v3 -->
+      <div class="pb-12">
+        <PostBlockThree />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V4</span>
+        <h2 class="title is-3">Latest News</h2>
+        <p class="subtitle is-5 text-medium">
+          Stay tuned to our new feed and don't miss anything
+        </p>
+      </div>
+  
+      <!-- Posts block v4 -->
+      <div class="pb-12">
+        <PostBlockFour />  
+      </div>
+    </div>
+  </div>
+  
+  <!-- CTA -->
+  <div class="section">
+    <div class="container">
+      <div class="py-6">
+        <DoubleCta />  
+      </div>
+    </div>
+  </div>
+  
+</Layout>

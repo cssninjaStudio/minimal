@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Default.astro';
+import TableBlockOne from '../components/blocks/table/TableBlockOne.astro';
+import TableBlockTwo from '../components/blocks/table/TableBlockTwo.astro';
+import TableBlockThree from '../components/blocks/table/TableBlockThree.astro';
+import DoubleCta from '../components/DoubleCta.astro';
+const title = 'Table Blocks'
+---
+
+<Layout title={title}>
+  <div class="hero is-fullheight is-side is-left has-top-bg">
+    <img class="top-bg-alt" src="/img/bg/top-bg-alt.svg" alt="" />
+  
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5">
+            <h1 class="title is-1 is-bold">Minimal table sections.</h1>
+            <p class="subtitle is-5 b-centered-tablet-p text-medium">
+              Reusable table layout examples that you can use in your own sections and content.
+            </p>
+            <div class="buttons">
+              <a
+                href="#content-start"
+                class="button is-primary is-medium raised scroll-link"
+                >Explore</a
+              >
+              <a
+                href="https://docs.cssninja.io/minimal"
+                class="button is-primary is-outlined is-medium"
+                >Docs</a
+              >
+            </div>
+          </div>
+          <div class="column is-6 is-offset-1">
+            <img
+              class="light-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-3.svg"
+              alt=""
+            />
+            <img
+              class="dark-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-3-dark.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="content-start" class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V1</span>
+        <h2 class="title is-3">Simple Table</h2>
+        <p class="subtitle is-5 text-medium">
+          A simple table for most common use cases
+        </p>
+      </div>
+  
+      <!-- Table block v1 -->
+      <div class="pb-12">
+        <TableBlockOne />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V2</span>
+        <h2 class="title is-3">Advanced Table</h2>
+        <p class="subtitle is-5 text-medium">
+          An advanced table to show more complex data
+        </p>
+      </div>
+  
+      <!-- Table block v2 -->
+      <div class="pb-12">
+        <TableBlockTwo />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V3</span>
+        <h2 class="title is-3">Flex Table</h2>
+        <p class="subtitle is-5 text-medium">
+          A custom and responsive table built with flexbox
+        </p>
+      </div>
+  
+      <!-- Table block v3 -->
+      <div class="pb-12">
+        <TableBlockThree />  
+      </div>
+    </div>
+  </div>
+  
+  <!-- CTA -->
+  <div class="section">
+    <div class="container">
+      <div class="py-6">
+        <DoubleCta />  
+      </div>
+    </div>
+  </div>
+  
+</Layout>

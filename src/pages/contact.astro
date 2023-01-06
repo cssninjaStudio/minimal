@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Default.astro';
+import ContactBlockOne from '../components/blocks/contact/ContactBlockOne.astro';
+import ContactBlockTwo from '../components/blocks/contact/ContactBlockTwo.astro';
+import ContactBlockThree from '../components/blocks/contact/ContactBlockThree.astro';
+import ContactBlockFour from '../components/blocks/contact/ContactBlockFour.astro';
+import DoubleCta from '../components/DoubleCta.astro';
+const title = 'Contact Blocks'
+---
+
+<Layout title={title}>
+<link
+    href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+    rel="stylesheet"
+  />
+
+<div class="hero is-fullheight is-side is-left has-top-bg">
+  <img class="top-bg-alt" src="/img/bg/top-bg-alt.svg" alt="" />
+
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-5">
+          <h1 class="title is-1 is-bold">Minimal contact sections.</h1>
+          <p class="subtitle is-5 b-centered-tablet-p text-medium">
+            Resuable contact sections powered by Mapbox that you can copy and
+            paste into your layouts.
+          </p>
+          <div class="buttons">
+            <a
+              href="#content-start"
+              class="button is-primary is-medium raised scroll-link"
+              >Explore</a
+            >
+            <a
+              href="https://docs.cssninja.io/minimal"
+              class="button is-primary is-outlined is-medium"
+              >Docs</a
+            >
+          </div>
+        </div>
+        <div class="column is-6 is-offset-1">
+          <img
+            class="light-image-block mx-auto max-w-5"
+            src="/img/illustrations/hero-9.svg"
+            alt=""
+          />
+          <img
+            class="dark-image-block mx-auto max-w-5"
+            src="/img/illustrations/hero-9-dark.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="content-start" class="section has-pseudo-lines">
+  <div class="container">
+    <div class="has-text-centered py-12">
+      <span class="tag is-primary is-curved is-outlined mb-2">Block V1</span>
+      <h2 class="title is-3">Contact</h2>
+      <p class="subtitle is-5 text-medium">
+        Contact form section with interactive map
+      </p>
+    </div>
+
+    <!-- Contact block v1 -->
+    <div class="pb-12">
+      <ContactBlockOne />  
+    </div>
+  </div>
+</div>
+
+<div class="section has-pseudo-lines">
+  <div class="container">
+    <div class="has-text-centered py-12">
+      <span class="tag is-primary is-curved is-outlined mb-2">Block V2</span>
+      <h2 class="title is-3">Contact</h2>
+      <p class="subtitle is-5 text-medium">
+        Contact form section with interactive map
+      </p>
+    </div>
+
+    <!-- Contact block v2 -->
+    <div class="pb-12">
+      <ContactBlockTwo />  
+    </div>
+  </div>
+</div>
+
+<div class="section has-pseudo-lines">
+  <div class="container">
+    <div class="has-text-centered py-12">
+      <span class="tag is-primary is-curved is-outlined mb-2">Block V3</span>
+      <h2 class="title is-3">Contact</h2>
+      <p class="subtitle is-5 text-medium">
+        Contact form section with interactive map
+      </p>
+    </div>
+
+    <!-- Contact block v3 -->
+    <div class="pb-12">
+      <ContactBlockThree />  
+    </div>
+  </div>
+</div>
+
+<div class="section has-pseudo-lines">
+  <div class="container">
+    <div class="has-text-centered py-12">
+      <span class="tag is-primary is-curved is-outlined mb-2">Block V4</span>
+      <h2 class="title is-3">Contact</h2>
+      <p class="subtitle is-5 text-medium">
+        Contact form section with interactive map
+      </p>
+    </div>
+
+    <!-- Contact block v4 -->
+    <div class="pb-12">
+      <ContactBlockFour />  
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="section">
+  <div class="container">
+    <div class="py-6">
+      <DoubleCta />  
+    </div>
+  </div>
+</div>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+</Layout>

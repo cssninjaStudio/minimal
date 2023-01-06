@@ -1,0 +1,259 @@
+---
+import Layout from '../layouts/Sticky.astro';
+import AvatarDemo from '../components/blocks/elements/AvatarDemo.astro';
+import ButtonDemo from '../components/blocks/elements/ButtonDemo.astro';
+import DropdownDemo from '../components/blocks/elements/DropdownDemo.astro';
+import HelpersDemo from '../components/blocks/elements/HelpersDemo.astro';
+import ModalDemo from '../components/blocks/elements/ModalDemo.astro';
+import PaginationDemo from '../components/blocks/elements/PaginationDemo.astro';
+import ProgressDemo from '../components/blocks/elements/ProgressDemo.astro';
+import TagDemo from '../components/blocks/elements/TagDemo.astro';
+import DoubleCta from '../components/DoubleCta.astro';
+const title = 'Elements'
+---
+
+<Layout title={title}>
+  <div class="hero is-fullheight is-side is-left has-top-bg">
+    <img class="top-bg-alt" src="/img/bg/top-bg-alt.svg" alt="" />
+  
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5">
+            <h1 class="title is-1 is-bold">Minimal base elements.</h1>
+            <p class="subtitle is-5 b-centered-tablet-p text-medium">
+              Some basic elements that you will need to build your website or your
+              app.
+            </p>
+            <div class="buttons">
+              <a href="#content-start" class="button is-primary is-medium raised scroll-link">Explore</a>
+              <a href="https://docs.cssninja.io/minimal" class="button is-primary is-outlined is-medium">Docs</a>
+            </div>
+          </div>
+          <div class="column is-6 is-offset-1">
+            <img
+              class="light-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-6.svg"
+              alt=""
+            />
+            <img
+              class="dark-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-6-dark.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="content-start" class="section is-overflown">
+    <div class="container">
+      <div class="dual-layout">
+        <!-- Demo section -->
+        <div class="demo-section">
+          <!-- Block -->
+          <div id="button-element" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Button</h2>
+              <p class="subtitle is-6 text-medium">
+                Basic button variations and states
+              </p>
+            </div>
+  
+            <!-- Element -->
+            <div class="pb-12">
+              <ButtonDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="dropdown-element" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Dropdown</h2>
+              <p class="subtitle is-6 text-medium">
+                Dropdown styles and variations
+              </p>
+            </div>
+  
+            <!-- Element -->
+            <div class="pb-12">
+              <DropdownDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="modal-element" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Modal</h2>
+              <p class="subtitle is-6 text-medium">
+                Modal dialog sizes and variations
+              </p>
+            </div>
+  
+            <!-- Element -->
+            <div class="pb-12">
+              <ModalDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="pagination-element" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Pagination</h2>
+              <p class="subtitle is-6 text-medium">
+                Bulma pagination styles and variations
+              </p>
+            </div>
+  
+            <!-- Element -->
+            <div class="pb-12">
+              <PaginationDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="progress-element" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Progress</h2>
+              <p class="subtitle is-6 text-medium">
+                Bulma progress bar styles and variations
+              </p>
+            </div>
+  
+            <!-- Element -->
+            <div class="pb-12">
+              <ProgressDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="tag-element" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Tag</h2>
+              <p class="subtitle is-6 text-medium">
+                Bulma tag and badges styles
+              </p>
+            </div>
+  
+            <!-- Element -->
+            <div class="pb-12">
+              <TagDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="avatar-element" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Avatar</h2>
+              <p class="subtitle is-6 text-medium">
+                Avatar images size examples
+              </p>
+            </div>
+  
+            <!-- Element -->
+            <div class="pb-12">
+              <AvatarDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div id="helpers-element" class="demo-block">
+            <div class="pb-12">
+              <h2 class="title is-4">Helpers</h2>
+              <p class="subtitle is-6 text-medium">
+                Class helpers shipped with Minimal
+              </p>
+            </div>
+  
+            <!-- Element -->
+            <div class="pb-12">
+              <HelpersDemo />  
+            </div>
+          </div>
+  
+          <!-- Block -->
+          <div class="demo-block">
+            <div class="py-6">
+              <DoubleCta />  
+            </div>
+          </div>
+        </div>
+  
+        <!-- Toc -->
+        <div class="demo-toc" x-data="initToc()">
+          <div>
+            <h4 class="toc-title">On this page</h4>
+            <ul>
+              <li>
+                <a
+                  :class="activeItem === 'button-element' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="button-element"
+                  >Button</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'dropdown-element' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="dropdown-element"
+                  >Dropdown</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'modal-element' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="modal-element"
+                  >Modal</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'pagination-element' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="pagination-element"
+                  >Pagination</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'progress-element' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="progress-element"
+                  >Progress</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'tag-element' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="tag-element"
+                  >Tag</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'avatar-element' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="avatar-element"
+                  >Avatar</a
+                >
+              </li>
+              <li>
+                <a
+                  :class="activeItem === 'helpers-element' && 'is-active'"
+                  @click.prevent="selectItem($event)"
+                  data-section="helpers-element"
+                  >Helpers</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</Layout>

@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Default.astro';
+import TestimonialBlockOne from '../components/blocks/testimonials/TestimonialBlockOne.astro';
+import TestimonialBlockTwo from '../components/blocks/testimonials/TestimonialBlockTwo.astro';
+import TestimonialBlockThree from '../components/blocks/testimonials/TestimonialBlockThree.astro';
+import TestimonialBlockFour from '../components/blocks/testimonials/TestimonialBlockFour.astro';
+import TestimonialBlockFive from '../components/blocks/testimonials/TestimonialBlockFive.astro';
+import DoubleCta from '../components/DoubleCta.astro';
+const title = 'Testimonial Blocks'
+---
+
+<Layout title={title}>
+  <div class="hero is-fullheight is-side is-left has-top-bg">
+    <img class="top-bg-alt" src="/img/bg/top-bg-alt.svg" alt="" />
+  
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5">
+            <h1 class="title is-1 is-bold">Minimal testimonial sections.</h1>
+            <p class="subtitle is-5 b-centered-tablet-p text-medium">
+              Prebuilt and reusable testimonial blocks to help you get started with your
+              website.
+            </p>
+            <div class="buttons">
+              <a
+                href="#content-start"
+                class="button is-primary is-medium raised scroll-link"
+                >Explore</a
+              >
+              <a
+                href="https://docs.cssninja.io/minimal"
+                class="button is-primary is-outlined is-medium"
+                >Docs</a
+              >
+            </div>
+          </div>
+          <div class="column is-6 is-offset-1">
+            <img
+              class="light-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-5.svg"
+              alt=""
+            />
+            <img
+              class="dark-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-5-dark.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="content-start" class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V1</span>
+        <h2 class="title is-3">Hear what they say</h2>
+        <p class="subtitle is-5 text-medium">
+          Our clients our very satisfied with our services
+        </p>
+      </div>
+  
+      <!-- Testimonial block v1 -->
+      <div class="pb-12">
+        <TestimonialBlockOne />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V2</span>
+        <h2 class="title is-3">Hear what they say</h2>
+        <p class="subtitle is-5 text-medium">
+          Our clients our very satisfied with our services
+        </p>
+      </div>
+  
+      <!-- Testimonial block v2 -->
+      <div class="pb-12">
+        <TestimonialBlockTwo />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V3</span>
+        <h2 class="title is-3">Hear what they say</h2>
+        <p class="subtitle is-5 text-medium">
+          Our clients our very satisfied with our services
+        </p>
+      </div>
+  
+      <!-- Testimonial block v3 -->
+      <div class="pb-12">
+        <TestimonialBlockThree />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V4</span>
+        <h2 class="title is-3">Hear what they say</h2>
+        <p class="subtitle is-5 text-medium">
+          Our clients our very satisfied with our services
+        </p>
+      </div>
+  
+      <!-- Testimonial block v4 -->
+      <div class="pb-12">
+        <TestimonialBlockFour />
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V5</span>
+        <h2 class="title is-3">Hear what they say</h2>
+        <p class="subtitle is-5 text-medium">
+          Our clients our very satisfied with our services
+        </p>
+      </div>
+  
+      <!-- Testimonial block v5 -->
+      <div class="pb-12">
+        <TestimonialBlockFive />  
+      </div>
+    </div>
+  </div>
+  
+  <!-- CTA -->
+  <div class="section">
+    <div class="container">
+      <div class="py-6">
+        <DoubleCta />  
+      </div>
+    </div>
+  </div>
+  
+</Layout>

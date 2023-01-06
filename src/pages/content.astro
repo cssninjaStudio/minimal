@@ -1,0 +1,304 @@
+---
+import Layout from '../layouts/Default.astro';
+import ContentBlockOne from '../components/blocks/content/ContentBlockOne.astro';
+import ContentBlockTwo from '../components/blocks/content/ContentBlockTwo.astro';
+import ContentBlockThree from '../components/blocks/content/ContentBlockThree.astro';
+import ContentBlockFour from '../components/blocks/content/ContentBlockFour.astro';
+import ContentBlockFive from '../components/blocks/content/ContentBlockFive.astro';
+import ContentBlockSix from '../components/blocks/content/ContentBlockSix.astro';
+import ContentBlockSeven from '../components/blocks/content/ContentBlockSeven.astro';
+import ContentBlockEight from '../components/blocks/content/ContentBlockEight.astro';
+import ContentBlockNine from '../components/blocks/content/ContentBlockNine.astro';
+import ContentBlockTen from '../components/blocks/content/ContentBlockTen.astro';
+import ContentBlockEleven from '../components/blocks/content/ContentBlockEleven.astro';
+import ContentBlockTwelve from '../components/blocks/content/ContentBlockTwelve.astro';
+import ContentBlockThirteen from '../components/blocks/content/ContentBlockThirteen.astro';
+import ContentBlockFourteen from '../components/blocks/content/ContentBlockFourteen.astro';
+import DoubleCta from '../components/DoubleCta.astro';
+const title = 'Content Blocks'
+---
+
+<Layout title={title}>
+  
+  <div class="hero is-fullheight is-side is-left has-top-bg">
+    <img class="top-bg-alt" src="/img/bg/top-bg-alt.svg" alt="" />
+  
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5">
+            <h1 class="title is-1 is-bold">Minimal content sections.</h1>
+            <p class="subtitle is-5 b-centered-tablet-p text-medium">
+              Prebuilt content sections that you can easily reuse or extend for
+              your needs.
+            </p>
+            <div class="buttons">
+              <a href="#content-start" class="button is-primary is-medium raised scroll-link">Explore</a>
+              <a href="https://docs.cssninja.io/minimal" class="button is-primary is-outlined is-medium">Docs</a>
+            </div>
+          </div>
+          <div class="column is-6 is-offset-1">
+            <img
+              class="light-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-2.svg"
+              alt=""
+            />
+            <img
+              class="dark-image-block mx-auto max-w-5"
+              src="/img/illustrations/hero-2-dark.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="content-start" class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V1</span>
+        <h2 class="title is-3">Feel better</h2>
+        <p class="subtitle is-5 text-medium">
+          Our relaxing playlists make you feel better
+        </p>
+      </div>
+  
+      <!-- Content block v1 -->
+      <div class="pb-12">
+        <ContentBlockOne />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V2</span>
+        <h2 class="title is-3">The guys behind it</h2>
+        <p class="subtitle is-5 text-medium">
+          Some members of our talented creators crew
+        </p>
+      </div>
+  
+      <!-- Content block v2 -->
+      <div class="pb-12">
+        <ContentBlockTwo />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V3</span>
+        <h2 class="title is-3">Our Advisors</h2>
+        <p class="subtitle is-5 text-medium">
+          People with great expertise we rely on
+        </p>
+      </div>
+  
+      <!-- Content block v3 -->
+      <div class="pb-12">
+        <ContentBlockThree />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V4</span>
+        <h2 class="title is-3">Explore the wild</h2>
+        <p class="subtitle is-5 text-medium">
+          Venture in the wilderness with our trekking groups
+        </p>
+      </div>
+  
+      <!-- Content block v4 -->
+      <div class="pb-12">
+        <ContentBlockFour />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V5</span>
+        <h2 class="title is-3">Live the road trip</h2>
+        <p class="subtitle is-5 text-medium">
+          Live a great experience with great people
+        </p>
+      </div>
+  
+      <!-- Content block v5 -->
+      <div class="pb-12">
+        <ContentBlockFive />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V6</span>
+        <h2 class="title is-3">Booba's story</h2>
+        <p class="subtitle is-5 text-medium">
+          How he made it using our services
+        </p>
+      </div>
+  
+      <!-- Content block v6 -->
+      <div class="pb-12">
+        <ContentBlockSix />
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V7</span>
+        <h2 class="title is-3">Simply the best</h2>
+        <p class="subtitle is-5 text-medium">
+          Our quality standards are very high
+        </p>
+      </div>
+  
+      <!-- Content block v7 -->
+      <div class="pb-12">
+        <ContentBlockSeven />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V8</span>
+        <h2 class="title is-3">Go Vintage</h2>
+        <p class="subtitle is-5 text-medium">
+          Try out one of our older models
+        </p>
+      </div>
+  
+      <!-- Content block v8 -->
+      <div class="pb-12">
+        <ContentBlockEight />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V9</span>
+        <h2 class="title is-3">Old is Good.</h2>
+        <p class="subtitle is-5 text-medium">
+          Our old models are perfectly maintained and available
+        </p>
+      </div>
+  
+      <!-- Content block v9 -->
+      <div class="pb-12">
+        <ContentBlockNine />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V10</span>
+        <h2 class="title is-3">Start a Career.</h2>
+        <p class="subtitle is-5 text-medium">
+          Wanna be part of it? Send us your details
+        </p>
+      </div>
+  
+      <!-- Content block v10 -->
+      <div class="pb-12">
+        <ContentBlockTen />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V11</span>
+        <h2 class="title is-3">Code Tracking.</h2>
+        <p class="subtitle is-5 text-medium">
+          Nothing is lost, everything is tracked
+        </p>
+      </div>
+  
+      <!-- Content block v11 -->
+      <div class="pb-12">
+        <ContentBlockEleven />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V12</span>
+        <h2 class="title is-3">Starter Packs</h2>
+        <p class="subtitle is-5 text-medium">
+          Our different starter packs for every business
+        </p>
+      </div>
+  
+      <!-- Content block v12 -->
+      <div class="pb-12">
+        <ContentBlockTwelve />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V13</span>
+        <h2 class="title is-3">Starter Packs</h2>
+        <p class="subtitle is-5 text-medium">
+          Our different starter packs for every business
+        </p>
+      </div>
+  
+      <!-- Content block v13 -->
+      <div class="pb-12">
+        <ContentBlockThirteen />  
+      </div>
+    </div>
+  </div>
+  
+  <div class="section has-pseudo-lines">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Block V14</span>
+        <h2 class="title is-3">Starter Packs</h2>
+        <p class="subtitle is-5 text-medium">
+          Our different starter packs for every business
+        </p>
+      </div>
+  
+      <!-- Content block v14 -->
+      <div class="pb-12">
+        <ContentBlockFourteen />  
+      </div>
+    </div>
+  </div>
+  
+  <!-- CTA -->
+  <div class="section">
+    <div class="container">
+      <div class="py-6">
+        <DoubleCta />  
+      </div>
+    </div>
+  </div>
+  
+</Layout>

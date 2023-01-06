@@ -10,8 +10,9 @@ Minimal is built with [Bulma](https://bulma.io) and [Alpine JS](https://github.c
 
 ## 👍 Features
 
-* Gulp 4 and nodejs 16.x (minimum)
-* Bulma 0.9.x
+* Astro v1.x
+* Nodejs v16.x
+* Bulma v0.9.x
 * ES6 support
 * Alpine v3.x
 
