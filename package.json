@@ -1,6 +1,6 @@
 {
   "name": "minimal",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Minimal - Bulma + Alpine JS landing page",
   "type": "module",
   "private": true,

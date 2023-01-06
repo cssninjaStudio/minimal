@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/cssninjaStudio/minimal/compare/v2.0.2...v3.0.0) (2023-01-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate from gulp to astro
+
+### Features
+
+* migrate from gulp to astro ([652f649](https://github.com/cssninjaStudio/minimal/commit/652f64919c67e0c7f07f7160f1bceba3a6b44278))
+
 ### [2.0.2](https://github.com/cssninjaStudio/minimal/compare/v2.0.1...v2.0.2) (2022-11-28)
 
 ### [2.0.1](https://github.com/cssninjaStudio/minimal/compare/v2.0.0...v2.0.1) (2022-11-07)
