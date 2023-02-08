@@ -13,7 +13,6 @@ Minimal is built with [Bulma](https://bulma.io) and [Alpine JS](https://github.c
 * Astro v1.x
 * Nodejs v16.x
 * Bulma v0.9.x
-* ES6 support
 * Alpine v3.x
 
 ## 👌 Usage
