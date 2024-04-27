@@ -1,6 +1,6 @@
 ---
-import Layout from "../layouts/Minimal.astro";
-const title = "Signup";
+import Layout from '../layouts/Minimal.astro'
+const title = 'Signup'
 ---
 
 <Layout title={title}>
@@ -12,29 +12,17 @@ const title = "Signup";
           <div class="start">
             <div class="navbar-brand">
               <a class="navbar-item" href="/">
-                <img
-                  class="light-image-block"
-                  src="/img/logo/minimal.svg"
-                  alt=""
-                />
-                <img
-                  class="dark-image-block"
-                  src="/img/logo/minimal-white.svg"
-                  alt=""
-                />
+                <img class="light-image-block" src="/img/logo/minimal.svg" alt="" />
+                <img class="dark-image-block" src="/img/logo/minimal-white.svg" alt="" />
               </a>
             </div>
           </div>
           <div class="end">
             <label class="theme-toggle">
-              <input
-                type="checkbox"
-                x-on:change="toggleTheme()"
-                :checked="$store.app.isDark"
-              />
+              <input type="checkbox" x-on:change="toggleTheme()" :checked="$store.app.isDark" />
               <span class="theme-toggle-inner">
-                <i class="sun-icon iconify" data-icon="feather:sun"></i>
-                <i class="moon-icon iconify" data-icon="feather:moon"></i>
+                <iconify-icon class="sun-icon iconify" icon="lucide:sun"></iconify-icon>
+                <iconify-icon class="moon-icon iconify" icon="lucide:moon"></iconify-icon>
               </span>
             </label>
           </div>
@@ -50,10 +38,7 @@ const title = "Signup";
             <div class="column is-5 is-offset-1">
               <div class="signup-caption">
                 <h1 class="title is-2 is-thin is-leading">Register</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Verum
-                  hoc idem saepe faciamus.
-                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Verum hoc idem saepe faciamus.</p>
               </div>
 
               <div class="signup-form">
@@ -61,26 +46,18 @@ const title = "Signup";
                   <div class="field">
                     <label>Email Address</label>
                     <div class="control has-icon">
-                      <input
-                        type="text"
-                        class="input"
-                        placeholder="Enter your email"
-                      />
+                      <input type="text" class="input" placeholder="Enter your email" />
                       <div class="form-icon">
-                        <i class="iconify" data-icon="feather:mail"></i>
+                        <iconify-icon class="iconify" icon="lucide:mail"></iconify-icon>
                       </div>
                     </div>
                   </div>
                   <div class="field">
                     <label>Password</label>
                     <div class="control has-icon">
-                      <input
-                        type="password"
-                        class="input"
-                        placeholder="Enter your password"
-                      />
+                      <input type="password" class="input" placeholder="Enter your password" />
                       <div class="form-icon">
-                        <i class="iconify" data-icon="feather:lock"></i>
+                        <iconify-icon class="iconify" icon="lucide:lock"></iconify-icon>
                       </div>
                     </div>
                   </div>
@@ -95,9 +72,7 @@ const title = "Signup";
                   </div>
                   <div class="field">
                     <div class="buttons">
-                      <button class="button is-primary is-fullwidth raised">
-                        Sign Up
-                      </button>
+                      <button class="button is-primary is-fullwidth raised"> Sign Up </button>
                     </div>
 
                     <div class="login-link">
@@ -108,11 +83,7 @@ const title = "Signup";
               </div>
             </div>
             <div class="column is-6">
-              <img
-                class="signup-illustration"
-                src="/img/illustrations/signup.svg"
-                alt="Signup Illustration"
-              />
+              <img class="signup-illustration" src="/img/illustrations/signup.svg" alt="Signup Illustration" />
             </div>
           </div>
         </div>

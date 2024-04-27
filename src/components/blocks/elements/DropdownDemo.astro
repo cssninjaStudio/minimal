@@ -1,22 +1,12 @@
 <div>
   <div class="columns is-multiline">
     <div class="column is-4">
-      <div
-        class="dropdown"
-        x-data="initDropdown()"
-        :class="isActive && 'is-active'"
-        @click.away="close()"
-      >
+      <div class="dropdown" x-data="initDropdown()" :class="isActive && 'is-active'" @click.away="close()">
         <div class="dropdown-trigger">
-          <button
-            class="button"
-            aria-haspopup="true"
-            aria-controls="dropdown-menu"
-            @click="open()"
-          >
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" @click="open()">
             <span>Dropdown</span>
             <span class="icon is-small">
-              <i class="iconify" data-icon="lucide:chevron-down"></i>
+              <iconify-icon class="iconify" icon="lucide:chevron-down"></iconify-icon>
             </span>
           </button>
         </div>
@@ -32,22 +22,12 @@
       </div>
     </div>
     <div class="column is-4">
-      <div
-        class="dropdown"
-        x-data="initDropdown()"
-        :class="isActive && 'is-active'"
-        @click.away="close()"
-      >
+      <div class="dropdown" x-data="initDropdown()" :class="isActive && 'is-active'" @click.away="close()">
         <div class="dropdown-trigger">
-          <button
-            class="button is-form"
-            aria-haspopup="true"
-            aria-controls="dropdown-menu"
-            @click="open()"
-          >
+          <button class="button is-form" aria-haspopup="true" aria-controls="dropdown-menu" @click="open()">
             <span>Dropdown</span>
             <span class="icon is-small">
-              <i class="iconify" data-icon="lucide:chevron-down"></i>
+              <iconify-icon class="iconify" icon="lucide:chevron-down"></iconify-icon>
             </span>
           </button>
         </div>
@@ -63,22 +43,12 @@
       </div>
     </div>
     <div class="column is-4">
-      <div
-        class="dropdown is-right"
-        x-data="initDropdown()"
-        :class="isActive && 'is-active'"
-        @click.away="close()"
-      >
+      <div class="dropdown is-right" x-data="initDropdown()" :class="isActive && 'is-active'" @click.away="close()">
         <div class="dropdown-trigger">
-          <button
-            class="button is-form"
-            aria-haspopup="true"
-            aria-controls="dropdown-menu"
-            @click="open()"
-          >
+          <button class="button is-form" aria-haspopup="true" aria-controls="dropdown-menu" @click="open()">
             <span>Dropdown</span>
             <span class="icon is-small">
-              <i class="iconify" data-icon="lucide:chevron-down"></i>
+              <iconify-icon class="iconify" icon="lucide:chevron-down"></iconify-icon>
             </span>
           </button>
         </div>

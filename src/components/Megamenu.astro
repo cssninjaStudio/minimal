@@ -1,14 +1,11 @@
-<div
-  class="megamenu"
-  x-bind:class="{
+<div class="megamenu" x-bind:class=`{
     'is-active': megamenuOpened,
     '': !megamenuOpened,
-  }"
->
+  }`>
   <!--Megamenu 1-->
   <div x-show="openedMegamenu === 'megamenu-1'" class="megamenu-inner">
     <button class="close-button" x-on:click="megamenuOpened = !megamenuOpened">
-      <i class="iconify" data-icon="lucide:arrow-left"></i>
+      <iconify-icon class="iconify" icon="lucide:arrow-left"></iconify-icon>
     </button>
     <div class="container">
       <div class="columns">
@@ -16,17 +13,14 @@
           <div class="megamenu-block">
             <div class="media">
               <div class="media-left text-primary">
-                <i class="iconify" data-icon="ph:grid-four-duotone"></i>
+                <iconify-icon class="iconify" icon="ph:grid-four-duotone"></iconify-icon>
               </div>
               <div class="media-content">
                 <h3 class="text-rainbow">Elements</h3>
-                <p>
-                  Minimal ships with prebuilt and reusable elements that you can
-                  assemble to build your webpages
-                </p>
+                <p>Minimal ships with prebuilt and reusable elements that you can assemble to build your webpages</p>
                 <a class="action-link" href="/elements">
                   <span>Explore all elements</span>
-                  <i class="iconify" data-icon="lucide:arrow-right"></i>
+                  <iconify-icon class="iconify" icon="lucide:arrow-right"></iconify-icon>
                 </a>
               </div>
             </div>
@@ -37,26 +31,17 @@
             <h4 class="text-rainbow">Categories</h4>
             <ul>
               <li>
-                <a
-                  href="/elements#button-element"
-                  class="slide-link is-default"
-                >
+                <a href="/elements#button-element" class="slide-link is-default">
                   <span>Button</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="/elements#dropdown-element"
-                  class="slide-link is-default"
-                >
+                <a href="/elements#dropdown-element" class="slide-link is-default">
                   <span>Dropdown</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="/elements#avatar-element"
-                  class="slide-link is-default"
-                >
+                <a href="/elements#avatar-element" class="slide-link is-default">
                   <span>Avatar</span>
                 </a>
               </li>
@@ -78,7 +63,7 @@
                     <h5 class="title is-6 is-narrow">Modal dialog</h5>
                     <p>Javascript included</p>
                   </div>
-                  <i class="iconify" data-icon="ph:selection-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:selection-duotone"></iconify-icon>
                 </div>
               </a>
               <a href="/table" class="showcase-item">
@@ -88,7 +73,7 @@
                     <h5 class="title is-6 is-narrow">HTML Table</h5>
                     <p>Table layout variations</p>
                   </div>
-                  <i class="iconify" data-icon="ph:layout-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:layout-duotone"></iconify-icon>
                 </div>
               </a>
             </div>
@@ -101,7 +86,7 @@
   <!--Megamenu 2-->
   <div x-show="openedMegamenu === 'megamenu-2'" class="megamenu-inner">
     <button class="close-button" x-on:click="megamenuOpened = !megamenuOpened">
-      <i class="iconify" data-icon="lucide:arrow-left"></i>
+      <iconify-icon class="iconify" icon="lucide:arrow-left"></iconify-icon>
     </button>
     <div class="container">
       <div class="columns">
@@ -109,17 +94,14 @@
           <div class="megamenu-block">
             <div class="media">
               <div class="media-left text-primary">
-                <i class="iconify" data-icon="ph:receipt-duotone"></i>
+                <iconify-icon class="iconify" icon="ph:receipt-duotone"></iconify-icon>
               </div>
               <div class="media-content">
                 <h3 class="text-rainbow">Form controls</h3>
-                <p>
-                  Minimal offers a lot of prebuilt form controls. You can easily
-                  copy and paste them to create your forms.
-                </p>
+                <p>Minimal offers a lot of prebuilt form controls. You can easily copy and paste them to create your forms.</p>
                 <a class="action-link" href="/form">
                   <span>Explore form controls</span>
-                  <i class="iconify" data-icon="lucide:arrow-right"></i>
+                  <iconify-icon class="iconify" icon="lucide:arrow-right"></iconify-icon>
                 </a>
               </div>
             </div>
@@ -140,10 +122,7 @@
                 </a>
               </li>
               <li>
-                <a
-                  href="/form#form-checkbox"
-                  class="slide-link is-default"
-                >
+                <a href="/form#form-checkbox" class="slide-link is-default">
                   <span>Checkbox</span>
                 </a>
               </li>
@@ -165,7 +144,7 @@
                     <h5 class="title is-6 is-narrow">Datepicker</h5>
                     <p>Plugin included</p>
                   </div>
-                  <i class="iconify" data-icon="ph:calendar-blank-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:calendar-blank-duotone"></iconify-icon>
                 </div>
               </a>
               <a href="/form#form-autocomplete" class="showcase-item">
@@ -175,7 +154,7 @@
                     <h5 class="title is-6 is-narrow">Autocomplete</h5>
                     <p>Plugin included</p>
                   </div>
-                  <i class="iconify" data-icon="ph:gradient-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:gradient-duotone"></iconify-icon>
                 </div>
               </a>
             </div>
@@ -188,7 +167,7 @@
   <!--Megamenu 3-->
   <div x-show="openedMegamenu === 'megamenu-3'" class="megamenu-inner">
     <button class="close-button" x-on:click="megamenuOpened = !megamenuOpened">
-      <i class="iconify" data-icon="lucide:arrow-left"></i>
+      <iconify-icon class="iconify" icon="lucide:arrow-left"></iconify-icon>
     </button>
     <div class="container">
       <div class="columns">
@@ -196,18 +175,14 @@
           <div class="megamenu-block">
             <div class="media">
               <div class="media-left text-primary">
-                <i class="iconify" data-icon="ph:selection-background-duotone"
-                ></i>
+                <iconify-icon class="iconify" icon="ph:selection-background-duotone"></iconify-icon>
               </div>
               <div class="media-content">
                 <h3 class="text-rainbow">Blocks</h3>
-                <p>
-                  Minimal offers a lot of prebuilt form controls. You can easily
-                  copy and paste them to create your forms.
-                </p>
+                <p>Minimal offers a lot of prebuilt form controls. You can easily copy and paste them to create your forms.</p>
                 <a class="action-link" href="/features">
                   <span>Explore feature blocks</span>
-                  <i class="iconify" data-icon="lucide:arrow-right"></i>
+                  <iconify-icon class="iconify" icon="lucide:arrow-right"></iconify-icon>
                 </a>
               </div>
             </div>
@@ -260,7 +235,7 @@
                     <h5 class="title is-6 is-narrow">Features</h5>
                     <p>Prebuilt feature sections</p>
                   </div>
-                  <i class="iconify" data-icon="ph:sparkle-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:sparkle-duotone"></iconify-icon>
                 </div>
               </a>
               <a href="/content" class="showcase-item">
@@ -270,8 +245,7 @@
                     <h5 class="title is-6 is-narrow">Content</h5>
                     <p>Prebuilt content sections</p>
                   </div>
-                  <i class="iconify" data-icon="ph:circles-three-plus-duotone"
-                  ></i>
+                  <iconify-icon class="iconify" icon="ph:circles-three-plus-duotone"></iconify-icon>
                 </div>
               </a>
             </div>

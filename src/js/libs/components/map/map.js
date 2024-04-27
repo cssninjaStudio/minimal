@@ -1,6 +1,6 @@
 export function initMapBox() {
 
-    const token = 'pk.eyJ1IjoiY3NzbmluamEiLCJhIjoiY2toZW1nYm0zMDAxODJycXFzZ3g4cnZ6diJ9.9ebfrGREuwkauRr_afDTgA';
+    const token = 'pk.eyJ1IjoiZGlnaXNxdWFkIiwiYSI6ImNsZGRydWsycTA2anczdm11ZDI5bTVjcDEifQ.IrRvIDO0cSL46giduAGqcg';
     const markerOptions = {
         color: 'red',
     };

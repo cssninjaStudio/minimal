@@ -6,13 +6,12 @@
 ## ✌️ preview
 
 Check out the live demo by clicking [here](https://minimal.cssninja.io/). 
-Minimal is built with [Bulma](https://bulma.io) and [Alpine JS](https://github.com/alpinejs/alpine).
+Minimal is built with [Astro](https://astro.build), [Bulma](https://bulma.io) and [Alpine JS](https://github.com/alpinejs/alpine).
 
 ## 👍 Features
 
-* Astro v1.x
-* Nodejs v16.x
-* Bulma v0.9.x
+* Astro v4.x
+* Bulma 0.9.x
 * Alpine v3.x
 
 ## 👌 Usage

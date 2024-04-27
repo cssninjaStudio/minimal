@@ -2,43 +2,31 @@
 import Megamenu from '../components/Megamenu.astro'
 ---
 
-
 <nav
   class="navbar is-transparent is-fixed-top is-fade"
   x-data="initNavbar()"
   x-init="initScrollAnchors()"
   x-on:mouseleave="megamenuOpened = false"
   x-on:scroll.window="scroll()"
-  :class="{
+  :class=`{
         'is-scrolled': scrolled,
         '': !scrolled,
         'is-solid': mobileOpen || megamenuOpened,
         '': !mobileOpen || megamenuOpened
-    }"
+    }`
 >
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
-        <img
-          class="navbar-logo light-image-block"
-          src="/img/logo/minimal.svg"
-          alt="Logo"
-        />
-        <img
-          class="navbar-logo dark-image-block"
-          src="/img/logo/minimal-white.svg"
-          alt="Logo"
-        />
+        <img class="navbar-logo light-image-block" src="/img/logo/minimal.svg" alt="Logo" />
+        <img class="navbar-logo dark-image-block" src="/img/logo/minimal-white.svg" alt="Logo" />
       </a>
       <div class="navbar-burger" @click="openMobileMenu()">
         <div class="menu-toggle">
-          <div
-            class="icon-box-toggle is-navbar"
-            :class="{
+          <div class="icon-box-toggle is-navbar" :class=`{
                 'active': mobileOpen,
                 '': !mobileOpen
-            }"
-          >
+            }`>
             <div class="rotate">
               <i class="icon-line-top"></i>
               <i class="icon-line-center"></i>
@@ -48,36 +36,20 @@ import Megamenu from '../components/Megamenu.astro'
         </div>
       </div>
     </div>
-    <div
-      class="navbar-menu b-centered-mobile b-centered-tablet-p"
-      :class="{
+    <div class="navbar-menu b-centered-mobile b-centered-tablet-p" :class=`{
           'is-active': mobileOpen,
           '': !mobileOpen
-      }"
-    >
+      }`>
       <div class="navbar-start">
         <!-- Dropdown -->
-        <div
-          class="navbar-item has-dropdown is-hoverable"
-          x-data="{ open: false }"
-          @click.away="open = false"
-        >
-          <a
-            x-on:mouseover="megamenuOpened = false, openedMegamenu = ''"
-            @click="open = !open"
-            class="navbar-link is-flex is-align-items-center is-arrowless j-center-tablet-p j-center-mobile"
-          >
+        <div class="navbar-item has-dropdown is-hoverable" x-data=`{ open: false }` @click.away="open = false">
+          <a x-on:mouseover="megamenuOpened = false, openedMegamenu = ''" @click="open = !open" class="navbar-link is-flex is-align-items-center is-arrowless j-center-tablet-p j-center-mobile">
             Pages
-            <span
-              class="caret px-1 is-flex is-justify-content-center is-align-items-center"
-            >
-              <i class="iconify" data-icon="lucide:chevron-down"></i>
+            <span class="caret px-1 is-flex is-justify-content-center is-align-items-center">
+              <iconify-icon class="iconify" icon="lucide:chevron-down"></iconify-icon>
             </span>
           </a>
-          <div
-            class="navbar-dropdown is-boxed"
-            :class="open ? 'is-active' : ''"
-          >
+          <div class="navbar-dropdown is-boxed" :class="open ? 'is-active' : ''">
             <a class="navbar-item" href="/landing-1"> Example 1 </a>
             <a class="navbar-item" href="/landing-2"> Example 2 </a>
             <a class="navbar-item" href="/landing-3"> Example 3 </a>
@@ -90,39 +62,26 @@ import Megamenu from '../components/Megamenu.astro'
             <a class="navbar-item" href="/404"> Error 404 </a>
           </div>
         </div>
-        <a
-          class="navbar-item"
-          x-on:mouseover="megamenuOpened = true, openedMegamenu = 'megamenu-1'"
-        >
+        <a class="navbar-item" x-on:mouseover="megamenuOpened = true, openedMegamenu = 'megamenu-1'">
           <span>Elements</span>
-          <i class="iconify caret" data-icon="lucide:chevron-down"></i>
+          <iconify-icon class="iconify caret" icon="lucide:chevron-down"></iconify-icon>
         </a>
-        <a
-          class="navbar-item"
-          x-on:mouseover="megamenuOpened = true, openedMegamenu = 'megamenu-2'"
-        >
+        <a class="navbar-item" x-on:mouseover="megamenuOpened = true, openedMegamenu = 'megamenu-2'">
           <span>Form</span>
-          <i class="iconify caret" data-icon="lucide:chevron-down"></i>
+          <iconify-icon class="iconify caret" icon="lucide:chevron-down"></iconify-icon>
         </a>
-        <a
-          class="navbar-item"
-          x-on:mouseover="megamenuOpened = true, openedMegamenu = 'megamenu-3'"
-        >
+        <a class="navbar-item" x-on:mouseover="megamenuOpened = true, openedMegamenu = 'megamenu-3'">
           <span>Blocks</span>
-          <i class="iconify caret" data-icon="lucide:chevron-down"></i>
+          <iconify-icon class="iconify caret" icon="lucide:chevron-down"></iconify-icon>
         </a>
       </div>
       <div class="navbar-end">
         <div class="navbar-item is-mobile-centered">
           <label class="theme-toggle">
-            <input
-              type="checkbox"
-              x-on:change="toggleTheme()"
-              :checked="$store.app.isDark"
-            />
+            <input type="checkbox" x-on:change="toggleTheme()" :checked="$store.app.isDark" />
             <span class="theme-toggle-inner">
-              <i class="sun-icon iconify" data-icon="feather:sun"></i>
-              <i class="moon-icon iconify" data-icon="feather:moon"></i>
+              <iconify-icon class="sun-icon iconify" icon="lucide:sun"></iconify-icon>
+              <iconify-icon class="moon-icon iconify" icon="lucide:moon"></iconify-icon>
             </span>
           </label>
         </div>

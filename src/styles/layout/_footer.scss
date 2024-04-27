@@ -75,6 +75,7 @@ Footer
           border-color: var(--wrap-muted-color);
           width: 100%;
           padding-#{$start-direction}: 1rem;
+          border-radius: 0.65rem;
 
           &:focus {
             background: var(--input-bg-color);
