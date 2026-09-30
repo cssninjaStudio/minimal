@@ -1,6 +1,6 @@
 {
   "name": "minimal",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "Minimal - Astro + Bulma + Alpine JS landing page",
   "type": "module",
   "private": true,

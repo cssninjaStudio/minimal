@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/cssninjaStudio/minimal/compare/v3.2.0...v3.3.0) (2026-09-30)
+
+
+### ⚖️ License
+
+* relicense under MIT ([0bc7ed9](https://github.com/cssninjaStudio/minimal/commit/0bc7ed9c8230fd3ca1cefbe572fdf6f34555c0ef))
+
 ## [3.2.0](https://github.com/cssninjaStudio/minimal/compare/v3.1.1...v3.2.0) (2024-04-27)
 
 
